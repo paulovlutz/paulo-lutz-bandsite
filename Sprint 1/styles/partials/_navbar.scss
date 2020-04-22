@@ -4,7 +4,9 @@
     &__links {
         display: flex;
         padding: 0;
+        margin: 0;
         text-align: center;
+        font-family: "Avenir Demi Bold";
     }
 
     &__link {
@@ -14,6 +16,10 @@
         &--active {
             padding-bottom: 5px;
             border-bottom: 4px solid #FFFFFF;
+        }
+        
+        @include mobile-medium {
+            font-size: 1.2rem;
         }
     }
 }
