@@ -1,0 +1,19 @@
+.nav {
+    color: #FFFFFF;
+
+    &__links {
+        display: flex;
+        padding: 0;
+        text-align: center;
+    }
+
+    &__link {
+        list-style-type: none;
+        width: 50%;
+
+        &--active {
+            padding-bottom: 5px;
+            border-bottom: 4px solid #FFFFFF;
+        }
+    }
+}

@@ -1,0 +1,183 @@
+@import "partials/mixins";
+
+// Global
+
+@font-face {
+    font-family: Avenir;
+    src: url("../assets/_Global\ Font/Global");
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    color: #323232;
+    font-family: 'Avenir', sans-serif;
+}
+
+h1 {
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 0.95rem;
+    font-weight: 900;
+    line-height: 22px;
+}
+
+h3 {
+    font-size: 0.92rem;
+}
+
+h4 {
+    font-size: 0.8125rem;
+    line-height: 18px;
+}
+
+h5 {
+    font-size: 0.75rem;
+    line-height: 20px;
+}
+
+p {
+    font-size: 0.8rem;
+}
+
+// Header
+
+header {
+    @include mobile {
+        background-color: #323232;
+        height: 19.2vh;
+    }
+}
+
+.logo {
+    @include mobile {
+        margin: auto;
+        margin-bottom: 16px;
+        padding-top: 20px;
+        width: 40%;
+        display: flex;
+        font-weight: 700;
+    }
+}
+
+// Navbar
+
+@import "partials/navbar";
+
+// Hero
+
+.hero {
+    @include mobile {
+        height: 45vh;
+        background-image: url("../assets/Images/hero-dj.jpeg");
+        background-size: 100% 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    &__text {
+        @include mobile {
+            font-size: 1.5rem;
+            line-height: 32px;
+            padding-left: 3%;
+            color: #FFFFFF;
+            margin: 0;
+            width: 70%;
+        }
+    }
+}
+
+// About
+
+.about {
+    @include mobile {
+        width: 85%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 16px;
+    }
+
+
+    &__header {
+        margin: 4vh 0 3vh;
+    }
+
+    &__image {
+        width: 100%;
+    }
+
+    &__quote {
+
+        &--author {
+            margin: 0;
+        }
+    }
+
+    &__article {
+        margin-top: 2vh;
+    }
+
+    &__article--title {
+        margin-bottom: 4vh;
+    }
+}
+
+// Photo
+
+.photo {
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+
+    &__title {
+        padding-top: 5vh;
+        margin-bottom: 2vh;
+    }
+
+    &__images {
+        width: 94%;
+    }
+
+    &__image {
+        margin-bottom: 16px;
+        width: 100%;
+    }
+}
+
+// Footer
+
+.footer {
+    margin-bottom: 0;
+    background-color: #323232;
+    color: #FFFFFF;
+    padding-left: 4%;
+
+    &__title {
+        padding-top: 10%;
+    }
+
+    &__icons {
+        img {
+            padding-right: 10%;
+        }
+    }
+
+    &__copyrights {
+        p:last-child {
+            margin-bottom: 0;
+            padding-bottom: 24px;
+        }
+    }
+
+    h4,
+    p {
+        margin: 0;
+    }
+
+    .margin-bottom {
+        margin-bottom: 4vh;
+    }
+}
