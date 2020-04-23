@@ -3,40 +3,15 @@
 
 // Global
 
+html {
+    width: 100%;
+}
+
 body {
     width: 100%;
     margin: 0;
     color: #323232;
     font-family: 'Avenir Regular', sans-serif;
-}
-
-h1 {
-    font-family: "Avenir Bold";
-}
-
-h2 {
-    font-size: 0.95rem;
-    font-family: "Avenir Bold";
-    line-height: 22px;
-}
-
-h3 {
-    font-size: 0.92rem;
-    font-family: "Avenir Demi Bold";
-}
-
-h4 {
-    font-size: 0.8125rem;
-    line-height: 18px;
-}
-
-h5 {
-    font-size: 0.75rem;
-    line-height: 20px;
-}
-
-p {
-    font-size: 0.8rem;
 }
 
 // Header
@@ -87,7 +62,7 @@ header {
 // Hero
 
 .hero {
-    height: 45vh;
+    height: 30vh;
     background-image: url("../assets/Images/hero-dj.jpeg");
     background-size: 100% 100%;
     display: flex;
@@ -137,7 +112,7 @@ header {
     width: 85%;
     // display: flex;
     // flex-wrap: wrap;
-    margin: 0 16px;
+    margin: 0 16px 40px;
 
     @include mobile-medium {
         width: 90%;
@@ -248,7 +223,7 @@ header {
 
     &__title {
         padding-top: 5vh;
-        margin-bottom: 2vh;
+        margin-bottom: 4vh;
 
         @include tablet {
             font-size: 2.2rem;
@@ -294,13 +269,21 @@ header {
     background-color: #323232;
     color: #FFFFFF;
     padding-left: 4%;
+    // display: flex;
+    // flex-direction: column;
 
     @include mobile-medium {
+        padding: 0;
         text-align: center;
     }
 
     @include tablet {
         text-align: left;
+        padding-left: 24px;
+    }
+
+    @include desktop {
+        padding-left: 180px;
     }
 
     &__title {
@@ -316,8 +299,14 @@ header {
     &__icons {
         img {
             padding-right: 10%;
+
+            @include mobile-medium {
+                padding: 0;
+                padding-right: 10px;
+            }
+            
             @include tablet {
-                margin-right: 40%;
+                margin-right: 10%;
             }
         }
 
@@ -328,8 +317,18 @@ header {
 
     &__contacts {
         width: 90%;
-        display: inline-flex;
-        justify-content: space-between;
+        // display: inline-flex;
+        // justify-content: space-between;
+
+        @include mobile-medium {
+            width: 100%;
+        }
+
+        @include tablet {
+            display: inline-flex;
+            width: 75%;
+            justify-content: space-between;
+        }
 
         @include desktop {
             width: 55%;
@@ -352,7 +351,7 @@ header {
         }
 
         @include desktop {
-            display: block;
+            display: flex;
         }
     }
 
@@ -363,8 +362,8 @@ header {
 
         @include tablet {
             visibility: visible;
-            display: inline-flex;
-            padding-left: 44%;
+            display: inline;
+            padding-left: 35%;
         }
 
         @include desktop {

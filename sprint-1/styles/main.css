@@ -23,13 +23,6 @@
   src: url("../assets/_Global Font/Roboto/Roboto-Bold.ttf");
 }
 
-body {
-  width: 100%;
-  margin: 0;
-  color: #323232;
-  font-family: 'Avenir Regular', sans-serif;
-}
-
 h1 {
   font-family: "Avenir Bold";
 }
@@ -57,6 +50,17 @@ h5 {
 
 p {
   font-size: 0.8rem;
+}
+
+html {
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  color: #323232;
+  font-family: 'Avenir Regular', sans-serif;
 }
 
 header {
@@ -181,7 +185,7 @@ header {
 }
 
 .hero {
-  height: 45vh;
+  height: 30vh;
   background-image: url("../assets/Images/hero-dj.jpeg");
   background-size: 100% 100%;
   display: -webkit-box;
@@ -243,7 +247,7 @@ header {
 
 .about {
   width: 85%;
-  margin: 0 16px;
+  margin: 0 16px 40px;
 }
 
 @media screen and (min-width: 460px) {
@@ -387,7 +391,7 @@ header {
 
 .photo__title {
   padding-top: 5vh;
-  margin-bottom: 2vh;
+  margin-bottom: 4vh;
 }
 
 @media screen and (min-width: 768px) {
@@ -449,6 +453,7 @@ header {
 
 @media screen and (min-width: 460px) {
   .footer {
+    padding: 0;
     text-align: center;
   }
 }
@@ -456,6 +461,13 @@ header {
 @media screen and (min-width: 768px) {
   .footer {
     text-align: left;
+    padding-left: 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer {
+    padding-left: 180px;
   }
 }
 
@@ -477,9 +489,16 @@ header {
   padding-right: 10%;
 }
 
+@media screen and (min-width: 460px) {
+  .footer__icons img {
+    padding: 0;
+    padding-right: 10px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .footer__icons img {
-    margin-right: 40%;
+    margin-right: 10%;
   }
 }
 
@@ -493,12 +512,24 @@ header {
 
 .footer__contacts {
   width: 90%;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+}
+
+@media screen and (min-width: 460px) {
+  .footer__contacts {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__contacts {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    width: 75%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -529,7 +560,9 @@ header {
 
 @media screen and (min-width: 1200px) {
   .footer__copyrights {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -542,10 +575,8 @@ header {
 @media screen and (min-width: 768px) {
   .footer__logo {
     visibility: visible;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    padding-left: 44%;
+    display: inline;
+    padding-left: 35%;
   }
 }
 

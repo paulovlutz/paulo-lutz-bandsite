@@ -22,3 +22,33 @@
     font-family: "Roboto Bold";
     src: url("../assets/_Global Font/Roboto/Roboto-Bold.ttf");
 }
+
+
+h1 {
+    font-family: "Avenir Bold";
+}
+
+h2 {
+    font-size: 0.95rem;
+    font-family: "Avenir Bold";
+    line-height: 22px;
+}
+
+h3 {
+    font-size: 0.92rem;
+    font-family: "Avenir Demi Bold";
+}
+
+h4 {
+    font-size: 0.8125rem;
+    line-height: 18px;
+}
+
+h5 {
+    font-size: 0.75rem;
+    line-height: 20px;
+}
+
+p {
+    font-size: 0.8rem;
+}
