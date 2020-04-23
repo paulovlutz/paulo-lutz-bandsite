@@ -43,6 +43,18 @@ p {
 
 header {
     background-color: #323232;
+
+    @include tablet {
+        display: flex;
+        height: 80px;
+
+        a {
+            @include tablet {
+                padding-left: 5%;
+                display: flex;
+            }
+        }
+    }
 }
 
 .logo {
@@ -53,6 +65,11 @@ header {
     width: 40%;
     display: flex;
     font-family: "Avenir Demi Bold";
+
+    @include tablet {
+        height: 80%;
+        width: 100%;
+    }
 }
 
 // Navbar
@@ -69,7 +86,11 @@ header {
     align-items: center;
 
     @include mobile-big {
-        height: 80vh;
+        height: 300px;
+    }
+
+    @include tablet {
+        height: 400px;
     }
 
     &__text {
@@ -82,6 +103,11 @@ header {
 
         @include mobile-medium {
             font-size: 2rem;
+        }
+
+        @include tablet {
+            font-size: 3.2rem;
+            line-height: 70px;
         }
     }
 }
@@ -98,11 +124,19 @@ header {
         width: 90%;
     }
 
+    @include tablet {
+        width: 95%;
+    }
+
     &__header {
         margin: 4vh 0 3vh;
 
         @include mobile-medium {
             font-size: 1.6rem;
+        }
+
+        @include tablet {
+            font-size: 2.2rem;
         }
     }
 
@@ -114,6 +148,11 @@ header {
 
         @include mobile-medium {
             font-size: 1.3rem;
+        }
+
+        @include tablet {
+            width: 90%;
+            font-size: 1.5rem;
         }
 
         &--author {
@@ -134,6 +173,20 @@ header {
             @include mobile-medium {
                 font-size: 1.2rem;
             }
+
+            @include tablet {
+                font-size: 1.5rem;
+                margin-bottom: 1vh;
+            }
+        }
+
+        &--content {
+            @include tablet {
+                font-size: 1.1rem;
+                display: inline-flex;
+                width: 45%;
+                margin-right: 30px;
+            }
         }
     }
 }
@@ -150,9 +203,17 @@ header {
         margin: 8vh 0;
     }
 
+    @include tablet {
+        margin: 2vh 0 ;
+    }
+
     &__title {
         padding-top: 5vh;
         margin-bottom: 2vh;
+
+        @include tablet {
+            font-size: 2.2rem;
+        }
     }
 
     &__images {
@@ -163,6 +224,9 @@ header {
             flex-wrap: wrap;
         }
 
+        @include tablet {
+            width: 95%;
+        }
     }
 
     &__image {
@@ -172,6 +236,10 @@ header {
         @include mobile-big {
             width: 47%;
             padding-right: 2%;
+        }
+
+        @include tablet {
+            width: 30%;
         }
     }
 }
@@ -188,20 +256,64 @@ header {
         text-align: center;
     }
 
+    @include tablet {
+        text-align: left;
+    }
+
     &__title {
         padding-top: 10%;
+
+        @include tablet {
+            display: inline-flex;
+            padding-top: 3%;
+            padding-right: 5%;
+        }
     }
 
     &__icons {
         img {
             padding-right: 10%;
+            @include tablet {
+                margin-right: 40%;
+            }
         }
+
+        @include tablet {
+            display: inline-flex;
+        }
+    }
+
+    &__contacts {
+        width: 90%;
+        display: inline-flex;
+        justify-content: space-between;
     }
 
     &__copyrights {
         p:last-child {
             margin-bottom: 0;
             padding-bottom: 24px;
+
+            @include tablet {
+                padding-left: 5px;
+            }
+        }
+
+        @include tablet {
+            margin-top: 10px;
+            display: inline-flex;
+        }
+    }
+
+    &__logo {
+        @media (max-width: 767px) {
+            visibility: hidden;
+        }
+
+        @include tablet {
+            visibility: visible;
+            display: inline-flex;
+            padding-left: 44%;
         }
     }
 
