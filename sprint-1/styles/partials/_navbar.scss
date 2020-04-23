@@ -41,5 +41,9 @@
         @include tablet {
             font-size: 1rem;
         }
+
+        @include desktop {
+            font-size: 13px;
+        }
     }
 }

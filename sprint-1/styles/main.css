@@ -81,6 +81,12 @@ header {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  header {
+    padding-left: 180px;
+  }
+}
+
 .logo {
   height: 8vh;
   margin: auto;
@@ -97,6 +103,12 @@ header {
   .logo {
     height: 80%;
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    height: 50%;
   }
 }
 
@@ -162,6 +174,12 @@ header {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .nav__link {
+    font-size: 13px;
+  }
+}
+
 .hero {
   height: 45vh;
   background-image: url("../assets/Images/hero-dj.jpeg");
@@ -183,6 +201,12 @@ header {
 @media screen and (min-width: 768px) {
   .hero {
     height: 400px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    height: 670px;
   }
 }
 
@@ -208,13 +232,17 @@ header {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .hero__text {
+    font-size: 4.2rem;
+    line-height: 80px;
+    width: 50%;
+    padding-left: 180px;
+  }
+}
+
 .about {
   width: 85%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   margin: 0 16px;
 }
 
@@ -226,7 +254,15 @@ header {
 
 @media screen and (min-width: 768px) {
   .about {
+    margin-left: 20px;
     width: 95%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about {
+    width: 70%;
+    padding-left: 180px;
   }
 }
 
@@ -250,6 +286,13 @@ header {
   width: 100%;
 }
 
+@media screen and (min-width: 1200px) {
+  .about__image {
+    width: 100%;
+    height: 70%;
+  }
+}
+
 @media screen and (min-width: 460px) {
   .about__quote {
     font-size: 1.3rem;
@@ -258,7 +301,7 @@ header {
 
 @media screen and (min-width: 768px) {
   .about__quote {
-    width: 90%;
+    width: 93%;
     font-size: 1.5rem;
   }
 }
@@ -305,6 +348,13 @@ header {
   }
 }
 
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .about__article--content {
+    font-size: 0.9rem;
+    margin-right: 40px;
+  }
+}
+
 .photo {
   background-color: #FAFAFA;
   display: -webkit-box;
@@ -329,6 +379,12 @@ header {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .photo {
+    padding-left: 180px;
+  }
+}
+
 .photo__title {
   padding-top: 5vh;
   margin-bottom: 2vh;
@@ -337,6 +393,12 @@ header {
 @media screen and (min-width: 768px) {
   .photo__title {
     font-size: 2.2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .photo__title {
+    padding-bottom: 4vh;
   }
 }
 
@@ -439,6 +501,12 @@ header {
           justify-content: space-between;
 }
 
+@media screen and (min-width: 1200px) {
+  .footer__contacts {
+    width: 55%;
+  }
+}
+
 .footer__copyrights p:last-child {
   margin-bottom: 0;
   padding-bottom: 24px;
@@ -459,6 +527,12 @@ header {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .footer__copyrights {
+    display: block;
+  }
+}
+
 @media (max-width: 767px) {
   .footer__logo {
     visibility: hidden;
@@ -472,6 +546,12 @@ header {
     display: -ms-inline-flexbox;
     display: inline-flex;
     padding-left: 44%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__logo {
+    padding-left: 50%;
   }
 }
 
