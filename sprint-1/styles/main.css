@@ -78,10 +78,16 @@ header {
 
 @media screen and (min-width: 768px) and (min-width: 768px) {
   header a {
-    padding-left: 5%;
+    padding-left: 24px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  header a {
+    padding: 0;
   }
 }
 
@@ -94,8 +100,8 @@ header {
 .logo {
   height: 8vh;
   margin: auto;
-  margin-bottom: 16px;
-  padding-top: 12px;
+  margin-bottom: 5px;
+  padding-top: 5px;
   width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -107,12 +113,6 @@ header {
   .logo {
     height: 80%;
     width: 100%;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .logo {
-    height: 50%;
   }
 }
 
@@ -143,6 +143,13 @@ header {
   font-family: "Avenir Demi Bold";
 }
 
+@media screen and (min-width: 768px) {
+  .nav__links {
+    height: 100%;
+    line-height: 80px;
+  }
+}
+
 .nav__link {
   list-style-type: none;
   width: 50%;
@@ -150,20 +157,14 @@ header {
 
 @media screen and (min-width: 768px) {
   .nav__link {
-    padding-right: 25%;
+    margin-right: 30%;
   }
 }
 
 .nav__link--active {
   padding-bottom: 5px;
   border-bottom: 4px solid #FFFFFF;
-}
-
-@media screen and (min-width: 768px) {
-  .nav__link--active {
-    border: none;
-    padding-bottom: 0;
-  }
+  padding-right: 7%;
 }
 
 @media screen and (min-width: 460px) {
@@ -217,7 +218,7 @@ header {
 .hero__text {
   font-size: 1.5rem;
   line-height: 32px;
-  padding-left: 3%;
+  padding-left: 16px;
   color: #FFFFFF;
   margin: 0;
   width: 70%;
@@ -250,6 +251,13 @@ header {
   margin: 0 16px 40px;
 }
 
+@media screen and (min-width: 1200px) {
+  .about__content {
+    margin-left: 250px;
+    width: 60%;
+  }
+}
+
 @media screen and (min-width: 460px) {
   .about {
     width: 90%;
@@ -258,15 +266,8 @@ header {
 
 @media screen and (min-width: 768px) {
   .about {
-    margin-left: 20px;
+    margin-left: 24px;
     width: 95%;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .about {
-    width: 70%;
-    padding-left: 180px;
   }
 }
 
@@ -283,6 +284,12 @@ header {
 @media screen and (min-width: 768px) {
   .about__header {
     font-size: 2.2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about__header {
+    padding-left: 180px;
   }
 }
 
@@ -354,7 +361,8 @@ header {
 
 @media screen and (min-width: 768px) and (min-width: 1200px) {
   .about__article--content {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    width: 40%;
     margin-right: 40px;
   }
 }
@@ -368,7 +376,7 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-left: 5%;
+  padding-left: 16px;
 }
 
 @media screen and (min-width: 650px) {
@@ -379,6 +387,7 @@ header {
 
 @media screen and (min-width: 768px) {
   .photo {
+    padding-left: 24px;
     margin: 2vh 0;
   }
 }
@@ -390,7 +399,7 @@ header {
 }
 
 .photo__title {
-  padding-top: 5vh;
+  padding-top: 2vh;
   margin-bottom: 4vh;
 }
 
@@ -471,42 +480,38 @@ header {
   }
 }
 
-.footer__title {
+.footer__getInTouch--title {
   padding-top: 10%;
 }
 
 @media screen and (min-width: 768px) {
-  .footer__title {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+  .footer__getInTouch--title {
+    display: inline-block;
     padding-top: 3%;
-    padding-right: 5%;
+    width: 30%;
   }
 }
 
-.footer__icons img {
+.footer__getInTouch--icons img {
   padding-right: 10%;
 }
 
 @media screen and (min-width: 460px) {
-  .footer__icons img {
+  .footer__getInTouch--icons img {
     padding: 0;
     padding-right: 10px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .footer__icons img {
-    margin-right: 10%;
+  .footer__getInTouch--icons img {
+    margin-right: 32px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .footer__icons {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+  .footer__getInTouch--icons {
+    display: inline-block;
   }
 }
 
@@ -525,7 +530,7 @@ header {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    width: 75%;
+    width: 90%;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -534,7 +539,7 @@ header {
 
 @media screen and (min-width: 1200px) {
   .footer__contacts {
-    width: 55%;
+    width: 70%;
   }
 }
 
@@ -568,21 +573,16 @@ header {
 
 @media (max-width: 767px) {
   .footer__logo {
-    visibility: hidden;
+    display: none;
   }
 }
 
 @media screen and (min-width: 768px) {
   .footer__logo {
     visibility: visible;
-    display: inline;
-    padding-left: 35%;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .footer__logo {
-    padding-left: 50%;
+    display: inline-block;
+    text-align: right;
+    width: 40%;
   }
 }
 

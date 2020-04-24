@@ -25,8 +25,12 @@ header {
 
         a {
             @include tablet {
-                padding-left: 5%;
+                padding-left: 24px;
                 display: flex;
+            }
+
+            @include desktop {
+                padding: 0;
             }
         }
     }
@@ -39,8 +43,8 @@ header {
 .logo {
     height: 8vh;
     margin: auto;
-    margin-bottom: 16px;
-    padding-top: 12px;
+    margin-bottom: 5px;
+    padding-top: 5px;
     width: 40%;
     display: flex;
     font-family: "Avenir Demi Bold";
@@ -48,10 +52,6 @@ header {
     @include tablet {
         height: 80%;
         width: 100%;
-    }
-
-    @include desktop {
-        height: 50%;
     }
 }
 
@@ -83,7 +83,7 @@ header {
     &__text {
         font-size: 1.5rem;
         line-height: 32px;
-        padding-left: 3%;
+        padding-left: 16px;
         color: #FFFFFF;
         margin: 0;
         width: 70%;
@@ -110,22 +110,22 @@ header {
 
 .about {
     width: 85%;
-    // display: flex;
-    // flex-wrap: wrap;
     margin: 0 16px 40px;
+
+    &__content {
+        @include desktop {
+            margin-left: 250px;
+            width: 60%;
+        }
+    }
 
     @include mobile-medium {
         width: 90%;
     }
 
     @include tablet {
-        margin-left: 20px;
+        margin-left: 24px;
         width: 95%;
-    }
-
-    @include desktop {
-        width: 70%;
-        padding-left: 180px;
     }
 
     &__header {
@@ -137,6 +137,10 @@ header {
 
         @include tablet {
             font-size: 2.2rem;
+        }
+
+        @include desktop {
+            padding-left: 180px;
         }
     }
 
@@ -193,7 +197,8 @@ header {
                 margin-right: 30px;
 
                 @include desktop {
-                    font-size: 0.9rem;
+                    font-size: 0.8rem;
+                    width: 40%;
                     margin-right: 40px;
                 }
             }
@@ -207,14 +212,15 @@ header {
     background-color: #FAFAFA;
     display: flex;
     flex-direction: column;
-    padding-left: 5%;
+    padding-left: 16px;
 
     @include mobile-big {
         margin: 8vh 0;
     }
 
     @include tablet {
-        margin: 2vh 0 ;
+        padding-left: 24px;
+        margin: 2vh 0;
     }
 
     @include desktop {
@@ -222,7 +228,7 @@ header {
     }
 
     &__title {
-        padding-top: 5vh;
+        padding-top: 2vh;
         margin-bottom: 4vh;
 
         @include tablet {
@@ -269,8 +275,6 @@ header {
     background-color: #323232;
     color: #FFFFFF;
     padding-left: 4%;
-    // display: flex;
-    // flex-direction: column;
 
     @include mobile-medium {
         padding: 0;
@@ -286,37 +290,41 @@ header {
         padding-left: 180px;
     }
 
-    &__title {
-        padding-top: 10%;
+    &__getInTouch {
 
-        @include tablet {
-            display: inline-flex;
-            padding-top: 3%;
-            padding-right: 5%;
-        }
-    }
+        &--title {
+            padding-top: 10%;
 
-    &__icons {
-        img {
-            padding-right: 10%;
-
-            @include mobile-medium {
-                padding: 0;
-                padding-right: 10px;
-            }
-            
             @include tablet {
-                margin-right: 10%;
+                display: inline-block;
+                padding-top: 3%;
+                width: 30%;
             }
         }
 
-        @include tablet {
-            display: inline-flex;
+        &--icons {
+            img {
+                padding-right: 10%;
+
+                @include mobile-medium {
+                    padding: 0;
+                    padding-right: 10px;
+                }
+
+                @include tablet {
+                    margin-right: 32px;
+                }
+            }
+
+            @include tablet {
+                display: inline-block;
+            }
         }
     }
 
     &__contacts {
         width: 90%;
+
         // display: inline-flex;
         // justify-content: space-between;
 
@@ -326,12 +334,12 @@ header {
 
         @include tablet {
             display: inline-flex;
-            width: 75%;
+            width: 90%;
             justify-content: space-between;
         }
 
         @include desktop {
-            width: 55%;
+            width: 70%;
         }
     }
 
@@ -357,17 +365,14 @@ header {
 
     &__logo {
         @media (max-width: 767px) {
-            visibility: hidden;
+            display: none;
         }
 
         @include tablet {
             visibility: visible;
-            display: inline;
-            padding-left: 35%;
-        }
-
-        @include desktop {
-            padding-left: 50%;
+            display: inline-block;
+            text-align: right;
+            width: 40%;
         }
     }
 
