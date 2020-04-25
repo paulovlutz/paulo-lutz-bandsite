@@ -27,10 +27,24 @@ h1 {
   font-family: "Avenir Bold";
 }
 
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 2.25rem;
+    line-height: 68px;
+  }
+}
+
 h2 {
   font-size: 0.95rem;
   font-family: "Avenir Bold";
   line-height: 22px;
+}
+
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 1.5rem;
+    line-height: 32px;
+  }
 }
 
 h3 {
@@ -38,9 +52,23 @@ h3 {
   font-family: "Avenir Demi Bold";
 }
 
+@media screen and (min-width: 768px) {
+  h3 {
+    font-size: 1rem;
+    line-height: 24px;
+  }
+}
+
 h4 {
   font-size: 0.8125rem;
   line-height: 18px;
+}
+
+@media screen and (min-width: 768px) {
+  h4 {
+    font-size: 0.875rem;
+    line-height: 22px;
+  }
 }
 
 h5 {
@@ -109,6 +137,18 @@ header {
   font-family: "Avenir Demi Bold";
 }
 
+@media screen and (min-width: 460px) {
+  .logo {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .logo {
+    width: 28%;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .logo {
     height: 80%;
@@ -161,10 +201,28 @@ header {
   }
 }
 
+.nav__link:hover {
+  opacity: 0.5;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
 .nav__link--active {
-  padding-bottom: 5px;
+  padding-bottom: 15px;
   border-bottom: 4px solid #FFFFFF;
-  padding-right: 7%;
+}
+
+@media screen and (min-width: 768px) {
+  .nav__link--active {
+    margin-right: 30%;
+    padding-right: 7%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .nav__link--active {
+    padding-right: 0;
+  }
 }
 
 @media screen and (min-width: 460px) {
@@ -181,6 +239,7 @@ header {
 
 @media screen and (min-width: 1200px) {
   .nav__link {
+    margin-right: 56px;
     font-size: 13px;
   }
 }
@@ -195,6 +254,15 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+}
+
+.hero__layer {
+  position: absolute;
+  background-color: #323232;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
 }
 
 @media screen and (min-width: 650px) {
@@ -222,6 +290,7 @@ header {
   color: #FFFFFF;
   margin: 0;
   width: 70%;
+  z-index: 1;
 }
 
 @media screen and (min-width: 460px) {
@@ -232,7 +301,8 @@ header {
 
 @media screen and (min-width: 768px) {
   .hero__text {
-    font-size: 3.2rem;
+    padding-left: 24px;
+    font-size: 3.75rem;
     line-height: 70px;
   }
 }
@@ -438,6 +508,15 @@ header {
 .photo__image {
   margin-bottom: 16px;
   width: 100%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.photo__image:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
 }
 
 @media screen and (min-width: 650px) {
@@ -457,13 +536,14 @@ header {
   margin-bottom: 0;
   background-color: #323232;
   color: #FFFFFF;
-  padding-left: 4%;
+  padding-left: 16px;
 }
 
 @media screen and (min-width: 460px) {
   .footer {
     padding: 0;
     text-align: center;
+    font-size: 1.5rem;
   }
 }
 
@@ -486,8 +566,9 @@ header {
 
 @media screen and (min-width: 768px) {
   .footer__getInTouch--title {
+    font-size: 2rem;
     display: inline-block;
-    padding-top: 3%;
+    padding-top: 1%;
     width: 30%;
   }
 }
@@ -522,6 +603,7 @@ header {
 @media screen and (min-width: 460px) {
   .footer__contacts {
     width: 100%;
+    font-size: 1.5rem;
   }
 }
 
@@ -534,6 +616,12 @@ header {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 870px) {
+  .footer__contacts {
+    width: 80%;
   }
 }
 
@@ -586,6 +674,12 @@ header {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .footer .logo__footer {
+    width: 120px;
+  }
+}
+
 .footer h4 {
   font-family: "Avenir Bold";
 }
@@ -593,6 +687,20 @@ header {
 .footer h4,
 .footer p {
   margin: 0;
+}
+
+@media screen and (min-width: 460px) {
+  .footer h4,
+  .footer p {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer h4,
+  .footer p {
+    font-size: 15px;
+  }
 }
 
 .footer .margin-bottom {

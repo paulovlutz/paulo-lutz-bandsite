@@ -1,0 +1,65 @@
+.photo {
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    padding-left: 16px;
+
+    @include mobile-big {
+        margin: 8vh 0;
+    }
+
+    @include tablet {
+        padding-left: 24px;
+        margin: 2vh 0;
+    }
+
+    @include desktop {
+        padding-left: 180px;
+    }
+
+    &__title {
+        padding-top: 2vh;
+        margin-bottom: 4vh;
+
+        @include tablet {
+            font-size: 2.2rem;
+        }
+
+        @include desktop {
+            padding-bottom: 4vh;
+        }
+    }
+
+    &__images {
+        width: 94%;
+
+        @include mobile-big {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        @include tablet {
+            width: 95%;
+        }
+    }
+
+    &__image {
+        margin-bottom: 16px;
+        width: 100%;
+        filter: grayscale(100%);
+
+        &:hover {
+            filter: grayscale(0);
+            transition: 0.8s;
+        }
+
+        @include mobile-big {
+            width: 47%;
+            padding-right: 2%;
+        }
+
+        @include tablet {
+            width: 30%;
+        }
+    }
+}

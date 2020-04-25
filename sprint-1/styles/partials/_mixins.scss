@@ -24,6 +24,12 @@
     }
 }
 
+@mixin tablet-big {
+    @media screen and (min-width: $tablet-big) {
+        @content;
+    }
+}
+
 @mixin desktop {
     @media screen and (min-width: $desktop) {
         @content;

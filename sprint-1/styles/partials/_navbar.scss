@@ -29,10 +29,23 @@
             margin-right: 30%;
         }
 
+        &:hover {
+            opacity: 0.5;
+            transition: 1s;
+        }
+
         &--active {
-            padding-bottom: 5px;
+            padding-bottom: 15px;
             border-bottom: 4px solid #FFFFFF;
-            padding-right: 7%;
+
+            @include tablet {
+                margin-right: 30%;
+                padding-right: 7%;
+            }
+
+            @include desktop {
+                padding-right: 0;
+            }
         }
         
         @include mobile-medium {
@@ -44,6 +57,7 @@
         }
 
         @include desktop {
+            margin-right: 56px;
             font-size: 13px;
         }
     }
