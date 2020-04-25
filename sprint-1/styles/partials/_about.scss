@@ -4,8 +4,12 @@
 
     &__content {
         @include desktop {
-            margin-left: 250px;
+            margin: auto;
             width: 60%;
+        }
+
+        @include desktop-big {
+            width: 80%;
         }
     }
 
@@ -37,6 +41,10 @@
     &__image {
         width: 100%;
 
+        @include tablet {
+            width: 97%;
+        }
+
         @include desktop {
             width: 100%;
             height: 70%;
@@ -56,6 +64,7 @@
 
         &--author {
             margin: 0;
+            font-family: "Avenir Demi Bold";
 
             @include mobile-medium {
                 font-size: 1rem;
@@ -64,10 +73,10 @@
     }
 
     &__article {
-        margin-top: 2vh;
+        margin-top: 3vh;
 
         &--title {
-            margin-bottom: 4vh;
+            margin-bottom: 2vh;
 
             @include mobile-medium {
                 font-size: 1.2rem;
@@ -75,22 +84,26 @@
 
             @include tablet {
                 font-size: 1.5rem;
-                margin-bottom: 1vh;
             }
         }
 
-        &--content {
+        &--text {
             @include tablet {
                 font-size: 1.1rem;
                 display: inline-flex;
                 width: 45%;
                 margin-right: 30px;
+            }
 
+            &:first-of-type {
                 @include desktop {
-                    font-size: 0.8rem;
-                    width: 40%;
                     margin-right: 40px;
                 }
+            }
+
+            @include desktop {
+                font-size: 0.8rem;
+                width: 42%;
             }
         }
     }

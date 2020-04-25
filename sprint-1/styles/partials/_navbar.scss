@@ -1,5 +1,7 @@
+@import "./variables";
+
 .nav {
-    color: #FFFFFF;
+    color: $white;
 
     @include tablet {
         font-family: "Avenir Regular";
@@ -24,19 +26,21 @@
     &__link {
         list-style-type: none;
         width: 50%;
+        font-size: 1.1rem;
 
         @include tablet {
             margin-right: 30%;
         }
 
         &:hover {
+            cursor: pointer;
             opacity: 0.5;
             transition: 1s;
         }
 
         &--active {
             padding-bottom: 15px;
-            border-bottom: 4px solid #FFFFFF;
+            border-bottom: 4px solid $white;
 
             @include tablet {
                 margin-right: 30%;

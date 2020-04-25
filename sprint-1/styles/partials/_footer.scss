@@ -1,7 +1,8 @@
+@import "./variables";
+
 .footer {
-    margin-bottom: 0;
-    background-color: #323232;
-    color: #FFFFFF;
+    background-color: $black;
+    color: $white;
     padding-left: 16px;
 
     @include mobile-medium {
@@ -13,6 +14,7 @@
     @include tablet {
         text-align: left;
         padding-left: 24px;
+        margin-top: 24px;
     }
 
     @include desktop {
@@ -29,6 +31,10 @@
                 display: inline-block;
                 padding-top: 1%;
                 width: 30%;
+            }
+
+            @include desktop {
+                width: 25%;
             }
         }
 
@@ -76,6 +82,10 @@
         @include desktop {
             width: 70%;
         }
+
+        @include desktop-big {
+            width: 75%;
+        }
     }
 
     &__copyrights {
@@ -92,10 +102,6 @@
             margin-top: 10px;
             display: inline-flex;
         }
-
-        @include desktop {
-            display: flex;
-        }
     }
 
     &__logo {
@@ -108,6 +114,10 @@
             display: inline-block;
             text-align: right;
             width: 40%;
+        }
+
+        @include desktop {
+            width: 50%;
         }
     }
 
@@ -124,6 +134,7 @@
     h4,
     p {
         margin: 0;
+        color: $white;
 
         @include mobile-medium {
             font-size: 1.1rem;
