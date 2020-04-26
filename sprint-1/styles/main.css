@@ -395,6 +395,10 @@ body {
   }
 }
 
+.about__quote {
+  font-family: "Avenir Demi Bold";
+}
+
 @media screen and (min-width: 460px) {
   .about__quote {
     font-size: 1.3rem;
@@ -627,8 +631,40 @@ body {
   }
 }
 
+@media (max-width: 767px) {
+  .footer__logo {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__logo {
+    visibility: visible;
+    display: inline-block;
+    text-align: right;
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__logo {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer .logo__footer {
+    width: 120px;
+  }
+}
+
 .footer__contacts {
   width: 90%;
+}
+
+.footer__contacts a {
+  text-decoration: none;
+  color: #FFFFFF;
 }
 
 @media screen and (min-width: 460px) {
@@ -685,33 +721,6 @@ body {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
-  }
-}
-
-@media (max-width: 767px) {
-  .footer__logo {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .footer__logo {
-    visibility: visible;
-    display: inline-block;
-    text-align: right;
-    width: 40%;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .footer__logo {
-    width: 50%;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .footer .logo__footer {
-    width: 120px;
   }
 }
 

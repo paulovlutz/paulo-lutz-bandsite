@@ -1,5 +1,7 @@
+@import "./variables";
+
 .header {
-    background-color: #323232;
+    background-color: $black;
 
     @include tablet {
         display: flex;

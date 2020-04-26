@@ -52,6 +52,7 @@
     }
 
     &__quote {
+        font-family: "Avenir Demi Bold";
 
         @include mobile-medium {
             font-size: 1.3rem;
