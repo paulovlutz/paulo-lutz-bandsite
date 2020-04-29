@@ -37,22 +37,37 @@ let shows__array = [
 ];
 
 for (var i = 0; i < shows__array.length; i++) {
-    let shows__card = document.createElement("p");
-    let shows__date = document.createTextNode(shows__array[i]["date"]);
+    let shows__card = document.createElement("div");
+
+    let shows__dateText = document.createElement("p");
+    shows__dateText.innerText = "DATE";
+    shows__card.appendChild(shows__dateText);
+
+    let shows__date = document.createElement("p");
+    shows__date.innerText = shows__array[i]["date"];
     shows__card.appendChild(shows__date);
-    document.querySelector(".shows__dates").appendChild(shows__card);
+    document.querySelector(".shows__table").appendChild(shows__card);
 
-    let shows__venue = document.createTextNode(shows__array[i]["venue"]);
+    let shows__venueText = document.createElement("p");
+    shows__venueText.innerText = "VENUE";
+    shows__card.appendChild(shows__venueText);
+
+    let shows__venue = document.createElement("p");
+    shows__venue.innerText = shows__array[i]["venue"];
     shows__card.appendChild(shows__venue);
-    document.querySelector(".shows__dates").appendChild(shows__card);
+    document.querySelector(".shows__table").appendChild(shows__card);
 
-    let shows__location = document.createTextNode(shows__array[i]["location"]);
+    let shows__locationText = document.createElement("p");
+    shows__locationText.innerText = "LOCATION";
+    shows__card.appendChild(shows__locationText);
+
+    let shows__location = document.createElement("p");
+    shows__location.innerText = shows__array[i]["location"];
     shows__card.appendChild(shows__location);
-    document.querySelector(".shows__dates").appendChild(shows__card);
+    document.querySelector(".shows__table").appendChild(shows__card);
 
     let shows__button = document.createElement("button");
     shows__button.innerText = "BUY TICKETS";
     shows__button.classList.add("shows__button");
     shows__card.appendChild(shows__button);
-    document.querySelector(".shows__dates").appendChild(shows__button);
 }
