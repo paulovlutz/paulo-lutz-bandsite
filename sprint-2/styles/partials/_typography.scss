@@ -1,0 +1,75 @@
+@font-face {
+    font-family: "Avenir Regular";
+    src: url("../assets/Fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Regular.otf");
+}
+
+@font-face {
+    font-family: "Avenir Demi Bold";
+    src: url("../assets/Fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Demi.otf");
+}
+
+@font-face {
+    font-family: "Avenir Bold";
+    src: url("../assets/Fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../assets/Fonts/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Roboto Bold";
+    src: url("../assets/Fonts/Roboto/Roboto-Bold.ttf");
+}
+
+
+h1 {
+    font-family: "Avenir Bold";
+
+    @include tablet {
+        font-size: 2.25rem;
+        line-height: 68px;
+    }
+}
+
+h2 {
+    font-size: 0.95rem;
+    font-family: "Avenir Bold";
+    line-height: 22px;
+
+    @include tablet {
+        font-size: 1.5rem;
+        line-height: 32px;
+    }
+}
+
+h3 {
+    font-size: 0.92rem;
+    font-family: "Avenir Demi Bold";
+
+    @include tablet {
+        font-size: 1rem;
+        line-height: 24px;
+    }
+}
+
+h4 {
+    font-size: 0.8125rem;
+    line-height: 18px;
+
+    @include tablet {
+        font-size: 0.875rem;
+        line-height: 22px;
+    }
+}
+
+h5 {
+    font-size: 0.75rem;
+    line-height: 20px;
+}
+
+p {
+    font-size: 0.8rem;
+    color: $black;
+}

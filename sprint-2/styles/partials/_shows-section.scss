@@ -1,0 +1,14 @@
+@import "./typography";
+
+.shows {
+    padding-left: 16px;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__button {
+        height: 40px;
+        width: 80%;
+        background-color: $black;
+        color: $white;
+    }
+}

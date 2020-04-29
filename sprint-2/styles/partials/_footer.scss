@@ -1,0 +1,153 @@
+@import "./variables";
+
+.footer {
+    background-color: $black;
+    color: $white;
+    padding-left: 16px;
+
+    @include mobile-medium {
+        padding: 0;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    @include tablet {
+        text-align: left;
+        padding-left: 24px;
+        margin-top: 24px;
+    }
+
+    @include desktop {
+        padding-left: 180px;
+    }
+
+    &__getInTouch {
+
+        &--title {
+            padding-top: 10%;
+
+            @include tablet {
+                font-size: 2rem;
+                display: inline-block;
+                padding-top: 1%;
+                width: 30%;
+            }
+
+            @include desktop {
+                width: 25%;
+            }
+        }
+
+        &--icons {
+            img {
+                padding-right: 10%;
+
+                @include mobile-medium {
+                    padding: 0;
+                    padding-right: 10px;
+                }
+
+                @include tablet {
+                    margin-right: 32px;
+                }
+            }
+
+            @include tablet {
+                display: inline-block;
+            }
+        }
+    }
+
+    &__logo {
+        @media (max-width: 767px) {
+            display: none;
+        }
+
+        @include tablet {
+            visibility: visible;
+            display: inline-block;
+            text-align: right;
+            width: 40%;
+        }
+
+        @include desktop {
+            width: 50%;
+        }
+    }
+
+    .logo__footer {
+        @include desktop {
+            width: 120px;
+        }
+    }
+
+    &__contacts {
+        width: 90%;
+
+        a {
+            text-decoration: none;
+            color: $white;
+        }
+
+        @include mobile-medium {
+            width: 100%;
+            font-size: 1.5rem;
+        }
+
+        @include tablet {
+            display: inline-flex;
+            width: 90%;
+            justify-content: space-between;
+        }
+
+        @include tablet-big {
+            width: 80%;
+        }
+
+        @include desktop {
+            width: 70%;
+        }
+
+        @include desktop-big {
+            width: 75%;
+        }
+    }
+
+    &__copyrights {
+        p:last-child {
+            margin-bottom: 0;
+            padding-bottom: 24px;
+
+            @include tablet {
+                padding-left: 5px;
+            }
+        }
+
+        @include tablet {
+            margin-top: 10px;
+            display: inline-flex;
+        }
+    }
+
+    h4 {
+        font-family: "Avenir Bold";
+    }
+
+    h4,
+    p {
+        margin: 0;
+        color: $white;
+
+        @include mobile-medium {
+            font-size: 1.1rem;
+        }
+
+        @include tablet {
+            font-size: 15px;
+        }
+    }
+
+    .margin-bottom {
+        margin-bottom: 4vh;
+    }
+}

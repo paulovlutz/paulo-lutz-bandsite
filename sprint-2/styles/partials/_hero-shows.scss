@@ -1,0 +1,18 @@
+.hero {
+    background-image: url("../assets/Images/shows.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 472px;
+    align-items: flex-start;
+
+    &__text {
+        width: 90%;
+        padding-top: 30px;
+    }
+
+    h1 {
+        width: 100%;
+        line-height: 60px;
+        margin-top: 10px;
+    }
+}
