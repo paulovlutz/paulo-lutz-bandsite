@@ -569,6 +569,10 @@ body {
   }
 }
 
+.conversation {
+  margin-left: 16px;
+}
+
 .footer {
   background-color: #323232;
   color: #FFFFFF;

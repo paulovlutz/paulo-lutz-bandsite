@@ -36,7 +36,7 @@ let shows__array = [
     }
 ];
 
-for (var i = 0; i < shows__array.length; i++) {
+for (let i = 0; i < shows__array.length; i++) {
     let shows__card = document.createElement("div");
 
     let shows__dateText = document.createElement("p");
