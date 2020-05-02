@@ -72,13 +72,20 @@
         <section class="conversation">
             <h1 class="conversation__title">Join the Conversation</h1>
             <form action="" method="post" class="conversation__form">
-                <label for="name">NAME</label>
-                <input type="text" name="name" id="" placeholder="Your Name">
-                <label for="comment">COMMENT</label>
-                <textarea name="comment" id="" cols="30" rows="10" placeholder="Add a new comment"></textarea>
-                <button type="submit" class="submit">COMMENT</button>
+                <div class="row">
+                    <div class="column__picture">
+                        <img class="profile-picture" src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="dog-profile">
+                    </div>
+                    <div class="column__details">
+                        <label for="name" class="conversation__heading">NAME</label>
+                        <input type="text" name="name" id="" placeholder="Your Name">
+                        <label for="comment" class="conversation__heading">COMMENT</label>
+                        <textarea name="comment" id="" cols="30" rows="5" placeholder="Add a new comment"></textarea>
+                        <button type="submit" class="conversation__submit">COMMENT</button>
+                    </div>
+                </div>
             </form>
-            <div class="conversation__coments"></div>
+            <div class="conversation__comments"></div>
         </section>
     </main>
 
