@@ -32,7 +32,7 @@ function displayComment(commentObj) {
     comment__row.appendChild(column__picture);
 
     let profile__picture = document.createElement("img");
-    profile__picture.src = "https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60";
+    profile__picture.src = "https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1615&q=80";
     profile__picture.className = "profile-picture";
     column__picture.appendChild(profile__picture);
 

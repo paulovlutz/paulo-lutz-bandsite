@@ -3,25 +3,112 @@
 
 .shows {
     padding-left: 16px;
+    margin-top: 32px;
+    width: 90%;
+
+    @include tablet {
+        width: 100%;
+        padding-left: 24px;
+    }
+
+    @include desktop {
+        padding-left: 180px;
+        display: flex;
+        width: auto;
+    }
+
+    &__table {
+        @include mobile-medium {
+            text-align: center;
+        }
+
+        @include tablet {
+            text-align: start;
+            width: 95%;
+        }
+
+        @include desktop {
+            margin-left: 120px;
+            width: 65%;
+        }
+    }
 
     &__button {
-        height: 40px;
-        width: 80%;
+        height: 50px;
+        width: 95%;
         background-color: $black;
         color: $white;
+        font-family: "Avenir Demi Bold";
+        font-size: 0.9rem;
     }
 
     &__card {
         border-bottom: 1px solid $mercury;
+
+        @include tablet {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            @include tablet {
+                width: 25%;
+            }
+        }
+
+        p {
+            @include tablet {
+                width: 25%;
+            }
+        }
     }
 
     &__heading {
         color: $silver;
         font-family: "Avenir Demi Bold";
+
+        @include tablet {
+            display: none;
+        }
     }
 
     &__button {
         margin-bottom: 10px;
         border-radius: 5px;
+        width: 100%;
+
+        @include mobile-medium {
+            width: 50%;
+        }
+
+        @include tablet {
+            width: 25%;
+        }
     }
+
+    &__title {
+        margin: 0;
+    }
+}
+
+.div__tablet {
+    @include mobile {
+        display: none;
+    }
+
+    @include tablet {
+        display: flex;
+    }
+
+    p {
+        @include tablet {
+            width: 25%;
+        }
+    }
+}
+
+.header__tablet {
+    color: $silver;
+    font-family: "Avenir Demi Bold";
 }

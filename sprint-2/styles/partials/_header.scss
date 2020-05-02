@@ -9,7 +9,6 @@
 
         a {
             @include tablet {
-                padding-left: 24px;
                 display: flex;
             }
 
@@ -41,6 +40,7 @@
         }
     
         @include tablet {
+            margin-left: 24px;
             height: 80%;
             width: 100%;
         }

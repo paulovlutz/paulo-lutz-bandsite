@@ -107,7 +107,6 @@ body {
 
 @media screen and (min-width: 768px) and (min-width: 768px) {
   .header a {
-    padding-left: 24px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -152,6 +151,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .header__logo {
+    margin-left: 24px;
     height: 80%;
     width: 100%;
   }
@@ -204,6 +204,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .nav__link {
+    width: 100%;
     margin-right: 30%;
   }
 }
@@ -218,13 +219,6 @@ body {
 .nav__link--active {
   padding-bottom: 15px;
   border-bottom: 4px solid #FFFFFF;
-}
-
-@media screen and (min-width: 768px) {
-  .nav__link--active {
-    margin-right: 30%;
-    padding-right: 7%;
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -296,7 +290,7 @@ body {
   }
 }
 
-.hero__text {
+.hero__content {
   font-size: 1.5rem;
   line-height: 32px;
   padding-left: 16px;
@@ -307,13 +301,13 @@ body {
 }
 
 @media screen and (min-width: 460px) {
-  .hero__text {
+  .hero__content {
     font-size: 2rem;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .hero__text {
+  .hero__content {
     padding-left: 24px;
     font-size: 3.75rem;
     line-height: 70px;
@@ -321,7 +315,7 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
-  .hero__text {
+  .hero__content {
     font-size: 4.2rem;
     line-height: 80px;
     width: 50%;
@@ -339,15 +333,97 @@ body {
           align-items: flex-start;
 }
 
-.hero__text {
+@media screen and (min-width: 650px) {
+  .hero {
+    height: 550px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 670px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero__song {
+    width: 65%;
+    height: 180px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__song {
+    width: 40%;
+    height: 120px;
+  }
+}
+
+.hero__content {
   width: 90%;
   padding-top: 30px;
+}
+
+@media screen and (min-width: 650px) {
+  .hero__content {
+    padding-top: 80px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero__content {
+    padding-top: 96px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__content {
+    padding-top: 160px;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .hero__content h2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero__content h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__text {
+    display: inline-block;
+    width: 50%;
+  }
 }
 
 .hero h1 {
   width: 100%;
   line-height: 60px;
   margin-top: 10px;
+}
+
+@media screen and (min-width: 650px) {
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero h1 {
+    width: 85%;
+    font-size: 3.8rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero h1 {
+    font-size: 2.8rem;
+  }
 }
 
 @font-face {
@@ -435,17 +511,82 @@ p {
 
 .shows {
   padding-left: 16px;
+  margin-top: 32px;
+  width: 90%;
+}
+
+@media screen and (min-width: 768px) {
+  .shows {
+    width: 100%;
+    padding-left: 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .shows {
+    padding-left: 180px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 460px) {
+  .shows__table {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .shows__table {
+    text-align: start;
+    width: 95%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .shows__table {
+    margin-left: 120px;
+    width: 65%;
+  }
 }
 
 .shows__button {
-  height: 40px;
-  width: 80%;
+  height: 50px;
+  width: 95%;
   background-color: #323232;
   color: #FFFFFF;
+  font-family: "Avenir Demi Bold";
+  font-size: 0.9rem;
 }
 
 .shows__card {
   border-bottom: 1px solid #E1E1E1;
+}
+
+@media screen and (min-width: 768px) {
+  .shows__card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .shows__card h3 {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .shows__card p {
+    width: 25%;
+  }
 }
 
 .shows__heading {
@@ -453,9 +594,57 @@ p {
   font-family: "Avenir Demi Bold";
 }
 
+@media screen and (min-width: 768px) {
+  .shows__heading {
+    display: none;
+  }
+}
+
 .shows__button {
   margin-bottom: 10px;
   border-radius: 5px;
+  width: 100%;
+}
+
+@media screen and (min-width: 460px) {
+  .shows__button {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .shows__button {
+    width: 25%;
+  }
+}
+
+.shows__title {
+  margin: 0;
+}
+
+@media screen and (min-width: 320px) {
+  .div__tablet {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .div__tablet {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .div__tablet p {
+    width: 25%;
+  }
+}
+
+.header__tablet {
+  color: #AFAFAF;
+  font-family: "Avenir Demi Bold";
 }
 
 .footer {

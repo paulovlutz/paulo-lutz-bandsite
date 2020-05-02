@@ -5,14 +5,77 @@
     height: 472px;
     align-items: flex-start;
 
-    &__text {
+    @include mobile-big {
+        height: 550px;
+    }
+
+    @include tablet {
+        height: 670px;
+    }
+
+    &__song {
+
+        @include tablet {
+            width: 65%;
+            height: 180px;
+        }
+        
+        @include desktop {
+            width: 40%;
+            height: 120px;
+        }
+    }
+
+    &__content {
         width: 90%;
         padding-top: 30px;
+
+        @include mobile-big {
+            padding-top: 80px;
+        }
+
+        @include tablet {
+            padding-top: 96px;
+        }
+
+        @include desktop {
+            padding-top: 160px;
+        }
+
+        h2 {
+            @include mobile-big {
+                font-size: 1.4rem;
+            }
+
+            @include tablet {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    &__text {
+        @include desktop {
+            display: inline-block;
+            width: 50%;
+        }
     }
 
     h1 {
         width: 100%;
         line-height: 60px;
         margin-top: 10px;
+
+        @include mobile-big {
+            font-size: 3.5rem;
+        }
+
+        @include tablet {
+            width: 85%;
+            font-size: 3.8rem;
+        }
+
+        @include desktop {
+            font-size: 2.8rem;
+        }
     }
 }

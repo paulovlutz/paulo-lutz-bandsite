@@ -107,7 +107,6 @@ body {
 
 @media screen and (min-width: 768px) and (min-width: 768px) {
   .header a {
-    padding-left: 24px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -152,6 +151,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .header__logo {
+    margin-left: 24px;
     height: 80%;
     width: 100%;
   }
@@ -204,6 +204,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .nav__link {
+    width: 100%;
     margin-right: 30%;
   }
 }
@@ -218,13 +219,6 @@ body {
 .nav__link--active {
   padding-bottom: 15px;
   border-bottom: 4px solid #FFFFFF;
-}
-
-@media screen and (min-width: 768px) {
-  .nav__link--active {
-    margin-right: 30%;
-    padding-right: 7%;
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -296,7 +290,7 @@ body {
   }
 }
 
-.hero__text {
+.hero__content {
   font-size: 1.5rem;
   line-height: 32px;
   padding-left: 16px;
@@ -307,13 +301,13 @@ body {
 }
 
 @media screen and (min-width: 460px) {
-  .hero__text {
+  .hero__content {
     font-size: 2rem;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .hero__text {
+  .hero__content {
     padding-left: 24px;
     font-size: 3.75rem;
     line-height: 70px;
@@ -321,7 +315,7 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
-  .hero__text {
+  .hero__content {
     font-size: 4.2rem;
     line-height: 80px;
     width: 50%;
@@ -580,6 +574,31 @@ body {
           flex-direction: column;
 }
 
+@media screen and (min-width: 768px) {
+  .conversation {
+    margin-left: 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .conversation {
+    margin-left: 180px;
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .conversation__form {
+    margin-left: 80px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .conversation__form {
+    margin-left: 120px;
+  }
+}
+
 .conversation__heading {
   display: block;
   color: #AFAFAF;
@@ -590,34 +609,86 @@ body {
 .conversation__submit {
   display: block;
   height: 40px;
-  width: 210px;
+  width: 88%;
   background-color: #323232;
   color: #FFFFFF;
   border-radius: 5px;
+}
+
+@media screen and (min-width: 460px) {
+  .conversation__submit {
+    width: 85%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .conversation__submit {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .conversation__submit {
+    height: 48px;
+    width: 160px;
+    font-size: 1rem;
+  }
 }
 
 .conversation__comments {
   margin-top: 32px;
 }
 
+@media screen and (min-width: 768px) {
+  .conversation__comments {
+    margin-left: 80px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .conversation__comments {
+    margin-left: 120px;
+  }
+}
+
 .conversation input {
   border: 2px solid #323232;
   border-radius: 3px;
-  width: 190px;
+  width: 80%;
   height: 30px;
   line-height: 2em;
   padding-left: 10px;
   margin-bottom: 10px;
 }
 
+@media screen and (min-width: 1200px) {
+  .conversation input {
+    height: 48px;
+    font-size: 1rem;
+  }
+}
+
 .conversation textarea {
   background-color: #FAFAFA;
   border: 1px solid #E1E1E1;
   border-radius: 3px;
-  width: 190px;
+  width: 80%;
   line-height: 2em;
   padding-left: 10px;
   margin-bottom: 10px;
+}
+
+@media screen and (min-width: 460px) {
+  .conversation textarea {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .conversation textarea {
+    height: 96px;
+    font-size: 1rem;
+  }
 }
 
 .row {
@@ -641,7 +712,7 @@ body {
 }
 
 .column__details {
-  width: 100%;
+  width: 90%;
 }
 
 .column__details p {

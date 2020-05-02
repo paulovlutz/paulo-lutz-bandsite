@@ -34,7 +34,9 @@
         }
 
         @include tablet {
+            width: 100%;
             margin-right: 30%;
+
         }
 
         &:hover {
@@ -46,11 +48,6 @@
         &--active {
             padding-bottom: 15px;
             border-bottom: 4px solid $white;
-
-            @include tablet {
-                margin-right: 30%;
-                padding-right: 7%;
-            }
 
             @include desktop {
                 padding-right: 0;

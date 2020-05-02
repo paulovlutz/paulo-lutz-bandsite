@@ -36,6 +36,26 @@ let shows__array = [
     }
 ];
 
+let table = document.querySelector(".shows__table");
+
+let divTable = document.createElement("div");
+divTable.className = "div__tablet";
+
+let headerDates = document.createElement("p");
+headerDates.innerText = "DATES";
+headerDates.className = "header__tablet";
+let headerVenue = document.createElement("p");
+headerVenue.innerText = "VENUE";
+headerVenue.className = "header__tablet";
+let headerLocation = document.createElement("p");
+headerLocation.innerText = "LOCATION";
+headerLocation.className = "header__tablet";
+
+divTable.appendChild(headerDates);
+divTable.appendChild(headerVenue);
+divTable.appendChild(headerLocation);
+table.appendChild(divTable);
+
 function displayShow(showObj) {
     let shows__card = document.createElement("div");
     shows__card.className = "shows__card";
