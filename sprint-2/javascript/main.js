@@ -32,7 +32,7 @@ function displayComment(commentObj) {
     comment__row.appendChild(column__picture);
 
     let profile__picture = document.createElement("img");
-    profile__picture.src = "./assets/Images/profile-picture.jpeg";
+    profile__picture.src = "./assets/images/profile-picture.jpeg";
     profile__picture.className = "conversation__profile-picture";
     column__picture.appendChild(profile__picture);
 

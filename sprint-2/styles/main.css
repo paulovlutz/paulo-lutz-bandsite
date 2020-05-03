@@ -1,26 +1,26 @@
 @font-face {
   font-family: "Avenir Regular";
-  src: url("../assets/Fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Regular.otf");
+  src: url("../assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Regular.otf");
 }
 
 @font-face {
   font-family: "Avenir Demi Bold";
-  src: url("../assets/Fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Demi.otf");
+  src: url("../assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Demi.otf");
 }
 
 @font-face {
   font-family: "Avenir Bold";
-  src: url("../assets/Fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf");
+  src: url("../assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf");
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url("../assets/Fonts/Roboto/Roboto-Regular.ttf");
+  src: url("../assets/fonts/Roboto/Roboto-Regular.ttf");
 }
 
 @font-face {
   font-family: "Roboto Bold";
-  src: url("../assets/Fonts/Roboto/Roboto-Bold.ttf");
+  src: url("../assets/fonts/Roboto/Roboto-Bold.ttf");
 }
 
 h1 {
@@ -324,7 +324,7 @@ body {
 }
 
 .hero {
-  background-image: url("../assets/Images/hero-dj.jpeg");
+  background-image: url("../assets/images/hero-dj.jpeg");
 }
 
 .about {
