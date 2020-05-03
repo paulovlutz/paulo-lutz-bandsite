@@ -2,9 +2,11 @@
 @import "./variables";
 
 .shows {
+    box-sizing: border-box;
     padding-left: 16px;
+    margin-right: 16px;
     margin-top: 32px;
-    width: 90%;
+    margin-bottom: 40px;
 
     @include tablet {
         width: 100%;
@@ -18,13 +20,15 @@
     }
 
     &__table {
+        margin-top: 30px;
+
         @include mobile-medium {
             text-align: center;
         }
 
         @include tablet {
             text-align: start;
-            width: 95%;
+            margin-right: 24px;
         }
 
         @include desktop {
@@ -89,6 +93,10 @@
 
     &__title {
         margin: 0;
+
+        @include desktop {
+            margin-top: 25px;
+        }
     }
 }
 

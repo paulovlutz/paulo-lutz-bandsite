@@ -72,9 +72,11 @@ for (let i = 0; i < conversationComments.length; i++) {
 let form = document.querySelector(".conversation__form");
 form.addEventListener("submit", function(e) {
     e.preventDefault();
+    let newDate = new Date();
+    let currentDate = (newDate.getMonth()+1)+'/'+newDate.getDate()+'/'+newDate.getFullYear();
     let newCommentObj = {
         "name": e.target.name.value,
-        "date": "05/02/2020",
+        "date": currentDate,
         "comment": e.target.comment.value
     }
 
