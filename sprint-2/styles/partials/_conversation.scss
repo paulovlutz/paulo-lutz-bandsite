@@ -1,3 +1,6 @@
+@import "./variables";
+@import "./mixins";
+
 .conversation {
     margin-left: 16px;
     margin-bottom: 40px;
@@ -105,7 +108,7 @@
             display: inline-block;
         }
 
-        &>p {
+        & > p {
             margin-top: 0;
         }
 
@@ -174,6 +177,7 @@
         background-color: #323232;
         color: #FFFFFF;
         border-radius: 5px;
+        border: none;
 
         @include tablet {
             width: 25%;
@@ -183,6 +187,10 @@
             height: 48px;
             width: 160px;
             font-size: 1rem;
+        }
+
+        &:hover {
+            @include buttons;
         }
     }
 }

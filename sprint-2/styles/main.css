@@ -13,16 +13,6 @@
   src: url("../assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf");
 }
 
-@font-face {
-  font-family: "Roboto";
-  src: url("../assets/fonts/Roboto/Roboto-Regular.ttf");
-}
-
-@font-face {
-  font-family: "Roboto Bold";
-  src: url("../assets/fonts/Roboto/Roboto-Bold.ttf");
-}
-
 h1 {
   font-family: "Avenir Bold";
 }
@@ -414,13 +404,13 @@ body {
   }
 }
 
-.about__quote--author {
+.about__author {
   margin: 0;
   font-family: "Avenir Demi Bold";
 }
 
 @media screen and (min-width: 460px) {
-  .about__quote--author {
+  .about__author {
     font-size: 1rem;
   }
 }
@@ -429,24 +419,24 @@ body {
   margin-top: 3vh;
 }
 
-.about__article--title {
+.about__title {
   margin-bottom: 2vh;
 }
 
 @media screen and (min-width: 460px) {
-  .about__article--title {
+  .about__title {
     font-size: 1.2rem;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .about__article--title {
+  .about__title {
     font-size: 1.5rem;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .about__article--text {
+  .about__text {
     font-size: 1.1rem;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -457,13 +447,13 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
-  .about__article--text:first-of-type {
+  .about__text:first-of-type {
     margin-right: 40px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .about__article--text {
+  .about__text {
     font-size: 0.8rem;
     width: 42%;
   }
@@ -787,6 +777,7 @@ body {
   background-color: #323232;
   color: #FFFFFF;
   border-radius: 5px;
+  border: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -801,6 +792,13 @@ body {
     width: 160px;
     font-size: 1rem;
   }
+}
+
+.conversation__submit:hover {
+  background-color: #000000;
+  cursor: pointer;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .footer {

@@ -1,5 +1,6 @@
 @import "./typography";
 @import "./variables";
+@import "./mixins";
 
 .shows {
     box-sizing: border-box;
@@ -86,6 +87,7 @@
         margin-bottom: 10px;
         border-radius: 5px;
         width: 100%;
+        border: none;
 
         @include mobile-medium {
             width: 50%;
@@ -93,6 +95,10 @@
 
         @include tablet {
             width: 25%;
+        }
+
+        &:hover {
+            @include buttons
         }
     }
 }

@@ -62,50 +62,50 @@
             width: 93%;
             font-size: 1.5rem;
         }
+    }
 
-        &--author {
-            margin: 0;
-            font-family: "Avenir Demi Bold";
+    &__author {
+        margin: 0;
+        font-family: "Avenir Demi Bold";
 
-            @include mobile-medium {
-                font-size: 1rem;
-            }
+        @include mobile-medium {
+            font-size: 1rem;
         }
     }
 
     &__article {
         margin-top: 3vh;
+    }
 
-        &--title {
-            margin-bottom: 2vh;
+    &__title {
+        margin-bottom: 2vh;
 
-            @include mobile-medium {
-                font-size: 1.2rem;
-            }
+        @include mobile-medium {
+            font-size: 1.2rem;
+        }
 
-            @include tablet {
-                font-size: 1.5rem;
+        @include tablet {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__text {
+        @include tablet {
+            font-size: 1.1rem;
+            display: inline-flex;
+            width: 45%;
+            margin-right: 30px;
+        }
+
+        &:first-of-type {
+            @include desktop {
+                margin-right: 40px;
             }
         }
 
-        &--text {
-            @include tablet {
-                font-size: 1.1rem;
-                display: inline-flex;
-                width: 45%;
-                margin-right: 30px;
-            }
-
-            &:first-of-type {
-                @include desktop {
-                    margin-right: 40px;
-                }
-            }
-
-            @include desktop {
-                font-size: 0.8rem;
-                width: 42%;
-            }
+        @include desktop {
+            font-size: 0.8rem;
+            width: 42%;
         }
     }
 }

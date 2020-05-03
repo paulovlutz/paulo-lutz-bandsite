@@ -80,7 +80,7 @@ form.addEventListener("submit", function(e) {
         "comment": e.target.comment.value
     }
 
-    conversationComments.push(newCommentObj);
+    conversationComments.unshift(newCommentObj);
 
     commentsDiv.innerText = "";
 
