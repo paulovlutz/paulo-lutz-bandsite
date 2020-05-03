@@ -39,17 +39,17 @@ let shows__array = [
 let table = document.querySelector(".shows__table");
 
 let divTable = document.createElement("div");
-divTable.className = "div__tablet";
+divTable.className = "tablet__header";
 
 let headerDates = document.createElement("p");
 headerDates.innerText = "DATES";
-headerDates.className = "header__tablet";
+headerDates.className = "tablet__head";
 let headerVenue = document.createElement("p");
 headerVenue.innerText = "VENUE";
-headerVenue.className = "header__tablet";
+headerVenue.className = "tablet__head";
 let headerLocation = document.createElement("p");
 headerLocation.innerText = "LOCATION";
-headerLocation.className = "header__tablet";
+headerLocation.className = "tablet__head";
 
 divTable.appendChild(headerDates);
 divTable.appendChild(headerVenue);

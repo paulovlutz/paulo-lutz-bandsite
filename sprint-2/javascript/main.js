@@ -22,34 +22,34 @@ let commentsDiv = document.querySelector(".conversation__comments");
 function displayComment(commentObj) {
 
     let comments__card = document.createElement("div");
-    comments__card.className = "comments__card";
+    comments__card.className = "conversation__card";
 
     let comment__row = document.createElement("div");
-    comment__row.className = "row";
+    comment__row.className = "conversation__row";
 
     let column__picture = document.createElement("div");
-    column__picture.className = "column__picture";
+    column__picture.className = "conversation__picture";
     comment__row.appendChild(column__picture);
 
     let profile__picture = document.createElement("img");
-    profile__picture.src = "https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1615&q=80";
-    profile__picture.className = "profile-picture";
+    profile__picture.src = "./assets/Images/profile-picture.jpeg";
+    profile__picture.className = "conversation__profile-picture";
     column__picture.appendChild(profile__picture);
 
     let column__details = document.createElement("div");
-    column__details.className = "column__details";
+    column__details.className = "conversation__details";
     comment__row.appendChild(column__details);
 
     let column__namedate = document.createElement("div");
-    column__namedate.className = "column__namedate";
+    column__namedate.className = "conversation__nameAndDate";
 
     let comment__name = document.createElement("p");
     comment__name.innerText = commentObj["name"];
-    comment__name.className = "name__paragraph";
+    comment__name.className = "conversation__nameAndDate-name";
     column__namedate.appendChild(comment__name);
 
     let comment__date = document.createElement("p");
-    comment__date.className = "date__paragraph"
+    comment__date.className = "conversation__nameAndDate-date"
     comment__date.innerText = commentObj["date"];
     column__namedate.appendChild(comment__date);
 

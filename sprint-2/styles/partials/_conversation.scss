@@ -16,7 +16,7 @@
 
     &__form {
         width: 94%;
-        
+
         @include tablet {
             width: auto;
             margin-left: 80px;
@@ -36,30 +36,11 @@
         margin-bottom: 5px;
     }
 
-    &__submit {
-        display: block;
-        height: 40px;
-        width: 100%;
-        background-color: #323232;
-        color: #FFFFFF;
-        border-radius: 5px;
-
-        @include tablet {
-            width: 25%;
-        }
-
-        @include desktop {
-            height: 48px;
-            width: 160px;
-            font-size: 1rem;
-        }
-    }
-
     &__comments {
         margin-top: 32px;
 
         img {
-            @include tablet{
+            @include tablet {
                 width: 30px;
                 height: 30px;
             }
@@ -107,82 +88,101 @@
             font-size: 1rem;
         }
     }
-}
 
-.row {
-    display: flex;
-}
-
-.column__picture {
-    margin-top: 12px;
-    margin-right: 20px;
-}
-
-.column__namedate {
-    display: flex;
-    justify-content: space-between;
-
-    @include tablet {
-        justify-content: flex-start;
-    }
-}
-
-.column__details {
-    width: 90%;
-
-    & > p {
-        margin-top: 0;
-    }
-
-    @include desktop {
-        width: 460px;
-    }
-}
-
-.column__details p {
-    display: inline-block;
-}
-
-.profile-picture {
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-}
-
-.name__paragraph {
-    font-family: "Avenir Demi Bold";
-    
-    @include tablet {
-        margin-right: 10px;
-    }
-}
-
-.date__paragraph {
-    color: $silver;
-}
-
-.comments__card {
-    width: 94%;
-    border-bottom: 1px solid $mercury;
-    
-    &:first-of-type {
-        border-top: 1px solid $mercury;
-    }
-
-    @include tablet {
-        width: 100%;
-    }
-
-    @include desktop {
-        width: 530px;
-    }
-}
-
-.submit-button {
-    width: 100%;
-
-    @include tablet {
+    &__row {
         display: flex;
-        justify-content: flex-end;
+    }
+
+    &__picture {
+        margin-top: 12px;
+        margin-right: 20px;
+    }
+
+    &__details {
+        width: 90%;
+
+        p {
+            display: inline-block;
+        }
+
+        &>p {
+            margin-top: 0;
+        }
+
+        @include desktop {
+            width: 460px;
+        }
+    }
+
+    &__nameAndDate {
+        display: flex;
+        justify-content: space-between;
+
+        @include tablet {
+            justify-content: flex-start;
+        }
+
+        &-name {
+            font-family: "Avenir Demi Bold";
+        
+            @include tablet {
+                margin-right: 10px;
+            }
+        }
+
+        &-date {
+            color: $silver;
+        }
+    }
+
+    &__card {
+        width: 94%;
+        border-bottom: 1px solid $mercury;
+
+        &:first-of-type {
+            border-top: 1px solid $mercury;
+        }
+
+        @include tablet {
+            width: 100%;
+        }
+
+        @include desktop {
+            width: 530px;
+        }
+    }
+
+    &__profile-picture {
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+    }
+
+    &__submit-button {
+        width: 100%;
+    
+        @include tablet {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    &__submit {
+        display: block;
+        height: 40px;
+        width: 100%;
+        background-color: #323232;
+        color: #FFFFFF;
+        border-radius: 5px;
+
+        @include tablet {
+            width: 25%;
+        }
+
+        @include desktop {
+            height: 48px;
+            width: 160px;
+            font-size: 1rem;
+        }
     }
 }

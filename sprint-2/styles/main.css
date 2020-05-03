@@ -615,29 +615,6 @@ body {
   margin-bottom: 5px;
 }
 
-.conversation__submit {
-  display: block;
-  height: 40px;
-  width: 100%;
-  background-color: #323232;
-  color: #FFFFFF;
-  border-radius: 5px;
-}
-
-@media screen and (min-width: 768px) {
-  .conversation__submit {
-    width: 25%;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .conversation__submit {
-    height: 48px;
-    width: 160px;
-    font-size: 1rem;
-  }
-}
-
 .conversation__comments {
   margin-top: 32px;
 }
@@ -701,18 +678,36 @@ body {
   }
 }
 
-.row {
+.conversation__row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.column__picture {
+.conversation__picture {
   margin-top: 12px;
   margin-right: 20px;
 }
 
-.column__namedate {
+.conversation__details {
+  width: 90%;
+}
+
+.conversation__details p {
+  display: inline-block;
+}
+
+.conversation__details > p {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .conversation__details {
+    width: 460px;
+  }
+}
+
+.conversation__nameAndDate {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -722,84 +717,89 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .column__namedate {
+  .conversation__nameAndDate {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
 }
 
-.column__details {
-  width: 90%;
-}
-
-.column__details > p {
-  margin-top: 0;
-}
-
-@media screen and (min-width: 1200px) {
-  .column__details {
-    width: 460px;
-  }
-}
-
-.column__details p {
-  display: inline-block;
-}
-
-.profile-picture {
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-}
-
-.name__paragraph {
+.conversation__nameAndDate-name {
   font-family: "Avenir Demi Bold";
 }
 
 @media screen and (min-width: 768px) {
-  .name__paragraph {
+  .conversation__nameAndDate-name {
     margin-right: 10px;
   }
 }
 
-.date__paragraph {
+.conversation__nameAndDate-date {
   color: #AFAFAF;
 }
 
-.comments__card {
+.conversation__card {
   width: 94%;
   border-bottom: 1px solid #E1E1E1;
 }
 
-.comments__card:first-of-type {
+.conversation__card:first-of-type {
   border-top: 1px solid #E1E1E1;
 }
 
 @media screen and (min-width: 768px) {
-  .comments__card {
+  .conversation__card {
     width: 100%;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .comments__card {
+  .conversation__card {
     width: 530px;
   }
 }
 
-.submit-button {
+.conversation__profile-picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+.conversation__submit-button {
   width: 100%;
 }
 
 @media screen and (min-width: 768px) {
-  .submit-button {
+  .conversation__submit-button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+  }
+}
+
+.conversation__submit {
+  display: block;
+  height: 40px;
+  width: 100%;
+  background-color: #323232;
+  color: #FFFFFF;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .conversation__submit {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .conversation__submit {
+    height: 48px;
+    width: 160px;
+    font-size: 1rem;
   }
 }
 
