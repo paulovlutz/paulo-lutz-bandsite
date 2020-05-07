@@ -1,3 +1,5 @@
+let api_key = "d446290a-f9a1-470d-96dc-162fa9e46b8c";
+
 let conversationComments = [{
         "name": "Micheal Lyons",
         "date": "12/18/2018",

@@ -1,40 +1,4 @@
-let shows__array = [
-    {
-        "date": "Mon Dec 17 2018",
-        "venue": "Ronald Lane",
-        "location": "San Francisco, CA"
-    },
-
-    {
-        "date": "Tue Jul 18 2019",
-        "venue": "Pier 3 East",
-        "location": "San Francisco, CA"
-    },
-
-    {
-        "date": "Fri Jul 2019",
-        "venue": "View Loungue",
-        "location": "San Francisco, CA"
-    },
-
-    {
-        "date": "Sat Aug 12 2019",
-        "venue": "Hyatt Agency",
-        "location": "San Francisco, CA"
-    },
-
-    {
-        "date": "Fri Sep 05 2019",
-        "venue": "Moscow Center",
-        "location": "San Francisco, CA"
-    },
-
-    {
-        "date": "Wed Aug 11 2019",
-        "venue": "Pres Club",
-        "location": "San Francisco, CA"
-    }
-];
+let api_key = "d446290a-f9a1-470d-96dc-162fa9e46b8c";
 
 let table = document.querySelector(".shows__table");
 
@@ -75,7 +39,7 @@ function displayShow(showObj) {
     shows__card.appendChild(shows__venueText);
 
     let shows__venue = document.createElement("p");
-    shows__venue.innerText = showObj["venue"];
+    shows__venue.innerText = showObj["location"];
     shows__card.appendChild(shows__venue);
 
     let shows__locationText = document.createElement("p");
@@ -95,6 +59,16 @@ function displayShow(showObj) {
     shows__card.appendChild(shows__button);
 }
 
-for (let i = 0; i < shows__array.length; i++) {
-    displayShow(shows__array[i]);
-}
+axios
+    .get(`https://project-1-api.herokuapp.com/showdates?api_key=${api_key}`)
+    .then(result => {
+        let showData = result.data;
+        
+        for (let i=0; i < showData.length; i++) {
+            displayShow(showData[i]);
+        }
+    })
+    
+    .catch(err => {
+        console.error(err);
+    });
