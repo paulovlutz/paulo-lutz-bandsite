@@ -1,23 +1,4 @@
-let api_key = "d446290a-f9a1-470d-96dc-162fa9e46b8c";
-
-let conversationComments = [{
-        "name": "Micheal Lyons",
-        "date": "12/18/2018",
-        "comment": "They BLEW the ROOF off at their last show, once everyone started figuring out they were going. This is still simply the greatest opening of a concert I have EVER witnessed."
-    },
-
-    {
-        "name": "Gary Wong",
-        "date": "12/12/2018",
-        "comment": "Every time I see him shred I feel so motivated to get off my couch and hop on my board. He’s so talented! I wish I can ride like him one day so I can really enjoy myself!"
-    },
-
-    {
-        "name": "Theodore Duncan",
-        "date": "11/15/2018",
-        "comment": "How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!"
-    },
-];
+let api_key = "d58a4a47-c718-4105-9099-ffcab0654226";
 
 let commentsDiv = document.querySelector(".conversation__comments");
 
@@ -52,7 +33,7 @@ function displayComment(commentObj) {
 
     let comment__date = document.createElement("p");
     comment__date.className = "conversation__nameAndDate-date"
-    comment__date.innerText = commentObj["date"];
+    comment__date.innerText = commentObj["timestamp"];
     column__namedate.appendChild(comment__date);
 
     column__details.append(column__namedate);
@@ -62,33 +43,70 @@ function displayComment(commentObj) {
     column__details.appendChild(comment__text);
 
     comments__card.appendChild(comment__row);
-    commentsDiv.appendChild(comments__card);
-}
-
-for (let i = 0; i < conversationComments.length; i++) {
-    displayComment(conversationComments[i]);
+    commentsDiv.prepend(comments__card);
 }
 
 // Form
 
+// let form = document.querySelector(".conversation__form");
+// form.addEventListener("submit", function (e) {
+//     e.preventDefault();
+//     let newDate = new Date();
+//     let currentDate = (newDate.getMonth() + 1) + '/' + newDate.getDate() + '/' + newDate.getFullYear();
+//     let newCommentObj = {
+//         "name": e.target.name.value,
+//         "date": currentDate,
+//         "comment": e.target.comment.value
+//     }
+
+//     conversationComments.unshift(newCommentObj);
+
+//     commentsDiv.innerText = "";
+
+//     for (let i = 0; i < conversationComments.length; i++) {
+//         displayComment(conversationComments[i]);
+//     }
+
+//     form.reset();
+// });
+
+function getCommentsData() {
+    displayComment.innerText = "";
+    axios
+        .get(`https://project-1-api.herokuapp.com/comments?api_key=${api_key}`)
+        .then(result => {
+            let conversationData = result.data;
+
+            for (let i = 0; i < conversationData.length; i++) {
+                displayComment(conversationData[i]);
+            }
+        })
+
+        .catch(err => {
+            console.error(err);
+        });
+}
+
+getCommentsData();
+
 let form = document.querySelector(".conversation__form");
-form.addEventListener("submit", function(e) {
+form.addEventListener("submit", function (e) {
     e.preventDefault();
-    let newDate = new Date();
-    let currentDate = (newDate.getMonth()+1)+'/'+newDate.getDate()+'/'+newDate.getFullYear();
     let newCommentObj = {
         "name": e.target.name.value,
-        "date": currentDate,
         "comment": e.target.comment.value
     }
 
-    conversationComments.unshift(newCommentObj);
+    axios
+        .post(`https://project-1-api.herokuapp.com/comments?api_key=${api_key}`,
+            newCommentObj)
 
-    commentsDiv.innerText = "";
+        .then(result => {
+            console.log(result.data);
+            form.reset();
+            displayComment(result.data);
+        })
 
-    for (let i = 0; i < conversationComments.length; i++) {
-        displayComment(conversationComments[i]);
-    }
-
-    form.reset();
+        .catch(err =>
+            console.error(err));
 });
