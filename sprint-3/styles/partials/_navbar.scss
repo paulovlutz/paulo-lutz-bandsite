@@ -1,0 +1,70 @@
+@import "./variables";
+
+.nav {
+    color: $white;
+
+    @include tablet {
+        font-family: "Avenir Regular";
+        display: flex;
+        align-items: center;
+        margin-left: 10%;
+    }
+
+    &__links {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        font-family: "Avenir Demi Bold";
+
+        @include tablet {
+            height: 100%;
+            line-height: 80px;
+        }
+    }
+
+    &__link {
+        list-style-type: none;
+        width: 50%;
+        font-size: 1.1rem;
+
+        a {
+            text-decoration: none;
+            color: $white;
+        }
+
+        @include tablet {
+            width: 100%;
+            margin-right: 30%;
+
+        }
+
+        &:hover {
+            cursor: pointer;
+            opacity: 0.5;
+            transition: 1s;
+        }
+
+        &--active {
+            padding-bottom: 15px;
+            border-bottom: 4px solid $white;
+
+            @include desktop {
+                padding-right: 0;
+            }
+        }
+        
+        @include mobile-medium {
+            font-size: 1.2rem;
+        }
+
+        @include tablet {
+            font-size: 1rem;
+        }
+
+        @include desktop {
+            margin-right: 56px;
+            font-size: 13px;
+        }
+    }
+}

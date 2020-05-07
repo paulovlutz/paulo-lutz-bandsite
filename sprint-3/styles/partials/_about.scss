@@ -1,0 +1,111 @@
+.about {
+    width: 85%;
+    margin: 0 16px 40px;
+
+    &__content {
+        @include desktop {
+            margin: auto;
+            width: 60%;
+        }
+
+        @include desktop-big {
+            width: 80%;
+        }
+    }
+
+    @include mobile-medium {
+        width: 90%;
+    }
+
+    @include tablet {
+        margin-left: 24px;
+        width: 95%;
+    }
+
+    &__header {
+        margin: 4vh 0 3vh;
+
+        @include mobile-medium {
+            font-size: 1.6rem;
+        }
+
+        @include tablet {
+            font-size: 2.2rem;
+        }
+
+        @include desktop {
+            padding-left: 180px;
+        }
+    }
+
+    &__image {
+        width: 100%;
+
+        @include tablet {
+            width: 97%;
+        }
+
+        @include desktop {
+            width: 100%;
+            height: 70%;
+        }
+    }
+
+    &__quote {
+        font-family: "Avenir Demi Bold";
+
+        @include mobile-medium {
+            font-size: 1.3rem;
+        }
+
+        @include tablet {
+            width: 93%;
+            font-size: 1.5rem;
+        }
+    }
+
+    &__author {
+        margin: 0;
+        font-family: "Avenir Demi Bold";
+
+        @include mobile-medium {
+            font-size: 1rem;
+        }
+    }
+
+    &__article {
+        margin-top: 3vh;
+    }
+
+    &__title {
+        margin-bottom: 2vh;
+
+        @include mobile-medium {
+            font-size: 1.2rem;
+        }
+
+        @include tablet {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__text {
+        @include tablet {
+            font-size: 1.1rem;
+            display: inline-flex;
+            width: 45%;
+            margin-right: 30px;
+        }
+
+        &:first-of-type {
+            @include desktop {
+                margin-right: 40px;
+            }
+        }
+
+        @include desktop {
+            font-size: 0.8rem;
+            width: 42%;
+        }
+    }
+}
