@@ -32,8 +32,9 @@ function displayComment(commentObj) {
     column__namedate.appendChild(comment__name);
 
     let comment__date = document.createElement("p");
-    comment__date.className = "conversation__nameAndDate-date"
-    comment__date.innerText = commentObj["timestamp"];
+    comment__date.className = "conversation__nameAndDate-date";
+    let time = new Date(commentObj["timestamp"]);
+    comment__date.innerText = ((time.getDate()) + "/" + (time.getMonth()+1) + "/" + (time.getFullYear()));
     column__namedate.appendChild(comment__date);
 
     column__details.append(column__namedate);
@@ -45,30 +46,6 @@ function displayComment(commentObj) {
     comments__card.appendChild(comment__row);
     commentsDiv.prepend(comments__card);
 }
-
-// Form
-
-// let form = document.querySelector(".conversation__form");
-// form.addEventListener("submit", function (e) {
-//     e.preventDefault();
-//     let newDate = new Date();
-//     let currentDate = (newDate.getMonth() + 1) + '/' + newDate.getDate() + '/' + newDate.getFullYear();
-//     let newCommentObj = {
-//         "name": e.target.name.value,
-//         "date": currentDate,
-//         "comment": e.target.comment.value
-//     }
-
-//     conversationComments.unshift(newCommentObj);
-
-//     commentsDiv.innerText = "";
-
-//     for (let i = 0; i < conversationComments.length; i++) {
-//         displayComment(conversationComments[i]);
-//     }
-
-//     form.reset();
-// });
 
 function getCommentsData() {
     displayComment.innerText = "";
