@@ -816,6 +816,23 @@ body {
   transition: 1s;
 }
 
+.conversation__delete-button {
+  display: block;
+  color: #FFFFFF;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: #000000;
+  cursor: pointer;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.conversation__delete-button:hover {
+  background-color: #D63447;
+  color: #E1E1E1;
+}
+
 .footer {
   background-color: #323232;
   color: #FFFFFF;

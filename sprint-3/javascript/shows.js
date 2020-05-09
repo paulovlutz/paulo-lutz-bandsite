@@ -1,4 +1,4 @@
-let api_key = "d58a4a47-c718-4105-9099-ffcab0654226";
+let api_key = "53dec659-95be-4408-a184-a3c3050da62f";
 
 let table = document.querySelector(".shows__table");
 

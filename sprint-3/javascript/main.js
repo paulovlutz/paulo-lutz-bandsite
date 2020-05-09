@@ -1,6 +1,60 @@
-let api_key = "d58a4a47-c718-4105-9099-ffcab0654226";
+let api_key = "53dec659-95be-4408-a184-a3c3050da62f";
 
 let commentsDiv = document.querySelector(".conversation__comments");
+
+function timeStamp(time) {
+    let currentDate = new Date();
+
+    let msMinute = 60 * 1000;
+    let msHour = msMinute * 60;
+    let msDay = msHour * 24;
+    let msMonth = msDay * 30;
+    let msYear = msDay * 365;
+
+    let difference = currentDate - time;
+
+    if (difference < msMinute) {
+         return "Posted " + Math.round(difference/1000) + "s ago";   
+    }
+
+    else if (difference < msHour) {
+         return "Posted " + Math.round(difference/msMinute) + "m ago";   
+    }
+
+    else if (difference < msDay ) {
+         return "Posted " + Math.round(difference/msHour ) + "h ago";   
+    }
+
+    else if (difference < msMonth) {
+        return "Posted" + Math.round(difference/msDay) + " days ago";   
+    }
+
+    else if (difference < msYear) {
+        return "Posted " + Math.round(difference/msMonth) + " months ago";   
+    }
+
+    else {
+        return "Posted " + Math.round(difference/msYear ) + " years ago";   
+    }
+}
+
+function addListenerToDeleteForm(form) {
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        let id = e.target.hiddenID.value;
+
+        axios 
+            .delete (`https://project-1-api.herokuapp.com/comments/${id}?api_key=${api_key}`)
+
+            .then(result => {
+                let selectParentCard = form.closest(".conversation__card");
+                selectParentCard.remove();
+            })
+    
+            .catch(err =>
+                console.error(err));
+    });
+}
 
 function displayComment(commentObj) {
 
@@ -34,8 +88,8 @@ function displayComment(commentObj) {
 
     let comment__date = document.createElement("p");
     comment__date.className = "conversation__nameAndDate-date";
-    let time = new Date(commentObj.timestamp);
-    comment__date.innerText = ((time.getDate()) + "/" + (time.getMonth()+1) + "/" + (time.getFullYear()));
+    let time = commentObj.timestamp;
+    comment__date.innerText = timeStamp(time);
     column__namedate.appendChild(comment__date);
 
     column__details.append(column__namedate);
@@ -43,6 +97,24 @@ function displayComment(commentObj) {
     let comment__text = document.createElement("p");
     comment__text.innerText = commentObj.comment;
     column__details.appendChild(comment__text);
+
+    let deleteForm = document.createElement("form");
+    deleteForm.className = "conversation__delete-form";
+    let conversation__inputHidden = document.createElement("input");
+    conversation__inputHidden.setAttribute("type", "hidden");
+    conversation__inputHidden.setAttribute("name", "hiddenID");
+    conversation__inputHidden.setAttribute("value", commentObj.id);
+
+    addListenerToDeleteForm(deleteForm);
+
+    deleteForm.appendChild(conversation__inputHidden);
+
+    let comment__delete = document.createElement("button");
+    comment__delete.innerText = "Delete";
+    comment__delete.className = "conversation__delete-button";
+    deleteForm.appendChild(comment__delete);
+
+    column__details.appendChild(deleteForm);
 
     comments__card.appendChild(comment__row);
     commentsDiv.prepend(comments__card);
