@@ -17,6 +17,7 @@ function displayComment(commentObj) {
     let profile__picture = document.createElement("img");
     profile__picture.src = "./assets/images/profile-picture.jpeg";
     profile__picture.className = "conversation__profile-picture";
+    profile__picture.alt = "profile-picture";
     column__picture.appendChild(profile__picture);
 
     let column__details = document.createElement("div");
@@ -27,20 +28,20 @@ function displayComment(commentObj) {
     column__namedate.className = "conversation__nameAndDate";
 
     let comment__name = document.createElement("p");
-    comment__name.innerText = commentObj["name"];
+    comment__name.innerText = commentObj.name;
     comment__name.className = "conversation__nameAndDate-name";
     column__namedate.appendChild(comment__name);
 
     let comment__date = document.createElement("p");
     comment__date.className = "conversation__nameAndDate-date";
-    let time = new Date(commentObj["timestamp"]);
+    let time = new Date(commentObj.timestamp);
     comment__date.innerText = ((time.getDate()) + "/" + (time.getMonth()+1) + "/" + (time.getFullYear()));
     column__namedate.appendChild(comment__date);
 
     column__details.append(column__namedate);
 
     let comment__text = document.createElement("p");
-    comment__text.innerText = commentObj["comment"];
+    comment__text.innerText = commentObj.comment;
     column__details.appendChild(comment__text);
 
     comments__card.appendChild(comment__row);
@@ -79,7 +80,6 @@ form.addEventListener("submit", function (e) {
             newCommentObj)
 
         .then(result => {
-            console.log(result.data);
             form.reset();
             displayComment(result.data);
         })

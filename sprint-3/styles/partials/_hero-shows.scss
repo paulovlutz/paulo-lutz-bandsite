@@ -42,7 +42,9 @@
             padding-top: 160px;
         }
 
-        h2 {
+        .heading-2 {
+            font-size: 1rem;
+
             @include mobile-big {
                 font-size: 1.4rem;
             }
@@ -60,7 +62,7 @@
         }
     }
 
-    h1 {
+    .heading-1 {
         width: 100%;
         line-height: 60px;
         margin-top: 10px;

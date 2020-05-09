@@ -26,29 +26,32 @@ function displayShow(showObj) {
 
     let shows__dateText = document.createElement("p");
     shows__dateText.innerText = "DATE";
-    shows__dateText.className = "shows__heading";
+    shows__dateText.className = "shows__heading paragraph";
     shows__card.appendChild(shows__dateText);
 
     let shows__date = document.createElement("h3");
     shows__date.innerText = showObj["date"];
+    shows__date.className = "heading-3";
     shows__card.appendChild(shows__date);
 
     let shows__venueText = document.createElement("p");
     shows__venueText.innerText = "VENUE";
-    shows__venueText.className = "shows__heading";
+    shows__venueText.className = "shows__heading paragraph";
     shows__card.appendChild(shows__venueText);
 
     let shows__venue = document.createElement("p");
-    shows__venue.innerText = showObj["location"];
+    shows__venue.innerText = showObj["place"];
+    shows__venue.className = "paragraph";
     shows__card.appendChild(shows__venue);
 
     let shows__locationText = document.createElement("p");
     shows__locationText.innerText = "LOCATION";
-    shows__locationText.className = "shows__heading";
+    shows__locationText.className = "shows__heading paragraph";
     shows__card.appendChild(shows__locationText);
 
     let shows__location = document.createElement("p");
     shows__location.innerText = showObj["location"];
+    shows__location.className = "paragraph"
     shows__card.appendChild(shows__location);
 
     document.querySelector(".shows__table").appendChild(shows__card);

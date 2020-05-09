@@ -1,6 +1,6 @@
 .about {
     width: 85%;
-    margin: 0 16px 40px;
+    margin: 32px 16px 40px;
 
     &__content {
         @include desktop {
@@ -23,7 +23,7 @@
     }
 
     &__header {
-        margin: 4vh 0 3vh;
+        margin: 4vh 0 4vh;
 
         @include mobile-medium {
             font-size: 1.6rem;

@@ -47,15 +47,32 @@
             margin-bottom: 10px;
         }
 
-        h3 {
+        .heading-3 {
+            font-size: 1rem;
+            
             @include tablet {
                 width: 25%;
+                font-size: 1.2rem;
+            }
+
+            @include desktop {
+                font-size: 1rem;
             }
         }
 
-        p {
+        .paragraph {
+            font-size: 1rem;
+            
             @include tablet {
-                width: 25%;
+                width: 35%;
+                font-size: 1.2rem;
+                margin-right: 30px;
+            }
+
+            @include desktop {
+                width: 40%;
+                font-size: 1rem;
+                margin-right: 30px;
             }
         }
     }

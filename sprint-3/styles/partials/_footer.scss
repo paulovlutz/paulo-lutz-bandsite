@@ -22,39 +22,47 @@
     }
 
     &__getInTouch {
+        margin-bottom: 30px;
 
-        &--title {
-            padding-top: 10%;
+        @include tablet {
+            margin-bottom: 0;
+        }
+    }
 
-            @include tablet {
-                font-size: 2rem;
-                display: inline-block;
-                padding-top: 1%;
-                width: 30%;
+    &__title {
+        font-size: 2rem;
+        padding-top: 10%;
+        margin-top: 0;
+        margin-bottom: 30px;
+
+        @include tablet {
+            font-size: 2rem;
+            display: inline-block;
+            padding-top: 48px;
+            width: 30%;
+        }
+
+        @include desktop {
+            width: 25%;
+        }
+    }
+
+    &__icons {
+        img {
+            padding-right: 10%;
+
+            @include mobile-medium {
+                padding: 0;
+                padding-right: 10px;
             }
 
-            @include desktop {
-                width: 25%;
+            @include tablet {
+                margin-right: 32px;
             }
         }
 
-        &--icons {
-            img {
-                padding-right: 10%;
-
-                @include mobile-medium {
-                    padding: 0;
-                    padding-right: 10px;
-                }
-
-                @include tablet {
-                    margin-right: 32px;
-                }
-            }
-
-            @include tablet {
-                display: inline-block;
-            }
+        @include tablet {
+            display: inline-block;
         }
     }
 
@@ -129,16 +137,16 @@
         }
     }
 
-    h1 {
+    .heading-2 {
         margin-top: 0;
     }
 
-    h4 {
+    .heading-4 {
         font-family: "Avenir Bold";
     }
 
-    h4,
-    p {
+    .heading-4,
+    .paragraph {
         margin: 0;
         color: $white;
 
@@ -151,7 +159,7 @@
         }
     }
 
-    .margin-bottom {
-        margin-bottom: 4vh;
+    & &__margin-bottom {
+        margin-bottom: 3vh;
     }
 }

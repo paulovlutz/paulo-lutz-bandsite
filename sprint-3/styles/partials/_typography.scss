@@ -15,26 +15,51 @@
     src: url("../assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf");
 }
 
-h1 {
-    @include h1-style;
+.heading-1 {
+    font-family: "Avenir Bold";
+
+    @include tablet {
+        font-size: 2.25rem;
+        line-height: 68px;
+    }
 }
 
-h2 {
-    @include h2-style;
+.heading-2 {
+    font-family: "Avenir Bold";
+    line-height: 22px;
+
+    @include tablet {
+        font-size: 1.5rem;
+        line-height: 32px;
+    }
 }
 
-h3 {
-    @include h3-style;
+.heading-3 {
+    font-size: 0.92rem;
+    font-family: "Avenir Demi Bold";
+
+    @include tablet {
+        font-size: 1rem;
+        line-height: 24px;
+    }
 }
 
-h4 {
-    @include h4-style;
+.heading-4 {
+    font-size: 0.8125rem;
+    line-height: 18px;
+
+    @include tablet {
+        font-size: 0.875rem;
+        line-height: 22px;
+    }
 }
 
-h5 {
-    @include h5-style;
+.heading-5 {
+    font-size: 0.75rem;
+    line-height: 20px;
 }
 
-p {
-    @include p-style;
+.paragraph {
+    font-size: 0.8rem;
+    color: $black;
 }

@@ -42,56 +42,6 @@
     }
 }
 
-@mixin h1-style {
-    font-family: "Avenir Bold";
-
-    @include tablet {
-        font-size: 2.25rem;
-        line-height: 68px;
-    }
-}
-
-@mixin h2-style {
-    font-size: 0.95rem;
-    font-family: "Avenir Bold";
-    line-height: 22px;
-
-    @include tablet {
-        font-size: 1.5rem;
-        line-height: 32px;
-    }
-}
-
-@mixin h3-style {
-    font-size: 0.92rem;
-    font-family: "Avenir Demi Bold";
-
-    @include tablet {
-        font-size: 1rem;
-        line-height: 24px;
-    }
-}
-
-@mixin h4-style {
-    font-size: 0.8125rem;
-    line-height: 18px;
-
-    @include tablet {
-        font-size: 0.875rem;
-        line-height: 22px;
-    }
-}
-
-@mixin h5-style {
-    font-size: 0.75rem;
-    line-height: 20px;
-}
-
-@mixin p-style {
-    font-size: 0.8rem;
-    color: $black;
-}
-
 @mixin buttons {
     background-color: $complete-black;
     cursor: pointer;

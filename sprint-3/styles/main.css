@@ -13,60 +13,59 @@
   src: url("../assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf");
 }
 
-h1 {
+.heading-1 {
   font-family: "Avenir Bold";
 }
 
 @media screen and (min-width: 768px) {
-  h1 {
+  .heading-1 {
     font-size: 2.25rem;
     line-height: 68px;
   }
 }
 
-h2 {
-  font-size: 0.95rem;
+.heading-2 {
   font-family: "Avenir Bold";
   line-height: 22px;
 }
 
 @media screen and (min-width: 768px) {
-  h2 {
+  .heading-2 {
     font-size: 1.5rem;
     line-height: 32px;
   }
 }
 
-h3 {
+.heading-3 {
   font-size: 0.92rem;
   font-family: "Avenir Demi Bold";
 }
 
 @media screen and (min-width: 768px) {
-  h3 {
+  .heading-3 {
     font-size: 1rem;
     line-height: 24px;
   }
 }
 
-h4 {
+.heading-4 {
   font-size: 0.8125rem;
   line-height: 18px;
 }
 
 @media screen and (min-width: 768px) {
-  h4 {
+  .heading-4 {
     font-size: 0.875rem;
     line-height: 22px;
   }
 }
 
-h5 {
+.heading-5 {
   font-size: 0.75rem;
   line-height: 20px;
 }
 
-p {
+.paragraph {
   font-size: 0.8rem;
   color: #323232;
 }
@@ -147,12 +146,12 @@ body {
   }
 }
 
-.nav {
+.header__nav {
   color: #FFFFFF;
 }
 
 @media screen and (min-width: 768px) {
-  .nav {
+  .header__nav {
     font-family: "Avenir Regular";
     display: -webkit-box;
     display: -ms-flexbox;
@@ -164,7 +163,7 @@ body {
   }
 }
 
-.nav__links {
+.header__nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -175,62 +174,62 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .nav__links {
+  .header__nav-links {
     height: 100%;
     line-height: 80px;
   }
 }
 
-.nav__link {
+.header__nav-link {
   list-style-type: none;
   width: 50%;
   font-size: 1.1rem;
 }
 
-.nav__link a {
+.header__nav-link a {
   text-decoration: none;
   color: #FFFFFF;
 }
 
 @media screen and (min-width: 768px) {
-  .nav__link {
+  .header__nav-link {
     width: 100%;
     margin-right: 30%;
   }
 }
 
-.nav__link:hover {
+.header__nav-link:hover {
   cursor: pointer;
   opacity: 0.5;
   -webkit-transition: 1s;
   transition: 1s;
 }
 
-.nav__link--active {
+.header__nav-link--active {
   padding-bottom: 15px;
   border-bottom: 4px solid #FFFFFF;
 }
 
 @media screen and (min-width: 1200px) {
-  .nav__link--active {
+  .header__nav-link--active {
     padding-right: 0;
   }
 }
 
 @media screen and (min-width: 460px) {
-  .nav__link {
+  .header__nav-link {
     font-size: 1.2rem;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .nav__link {
+  .header__nav-link {
     font-size: 1rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .nav__link {
+  .header__nav-link {
     margin-right: 56px;
     font-size: 13px;
   }
@@ -319,7 +318,7 @@ body {
 
 .about {
   width: 85%;
-  margin: 0 16px 40px;
+  margin: 32px 16px 40px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -349,7 +348,7 @@ body {
 }
 
 .about__header {
-  margin: 4vh 0 3vh;
+  margin: 4vh 0 4vh;
 }
 
 @media screen and (min-width: 460px) {
@@ -491,7 +490,7 @@ body {
 }
 
 .photo__title {
-  margin: 4vh 0;
+  margin: 4vh 0 3vh;
 }
 
 @media screen and (min-width: 768px) {
@@ -576,6 +575,22 @@ body {
   .conversation {
     margin-left: 180px;
     width: 70%;
+  }
+}
+
+.conversation__title {
+  margin: 4vh 0 3vh;
+}
+
+@media screen and (min-width: 460px) {
+  .conversation__title {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .conversation__title {
+    font-size: 2.2rem;
   }
 }
 
@@ -829,44 +844,57 @@ body {
   }
 }
 
-.footer__getInTouch--title {
-  padding-top: 10%;
+.footer__getInTouch {
+  margin-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {
-  .footer__getInTouch--title {
+  .footer__getInTouch {
+    margin-bottom: 0;
+  }
+}
+
+.footer__title {
+  font-size: 2rem;
+  padding-top: 10%;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__title {
     font-size: 2rem;
     display: inline-block;
-    padding-top: 1%;
+    padding-top: 48px;
     width: 30%;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .footer__getInTouch--title {
+  .footer__title {
     width: 25%;
   }
 }
 
-.footer__getInTouch--icons img {
+.footer__icons img {
   padding-right: 10%;
 }
 
 @media screen and (min-width: 460px) {
-  .footer__getInTouch--icons img {
+  .footer__icons img {
     padding: 0;
     padding-right: 10px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .footer__getInTouch--icons img {
+  .footer__icons img {
     margin-right: 32px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .footer__getInTouch--icons {
+  .footer__icons {
     display: inline-block;
   }
 }
@@ -964,35 +992,35 @@ body {
   }
 }
 
-.footer h1 {
+.footer .heading-2 {
   margin-top: 0;
 }
 
-.footer h4 {
+.footer .heading-4 {
   font-family: "Avenir Bold";
 }
 
-.footer h4,
-.footer p {
+.footer .heading-4,
+.footer .paragraph {
   margin: 0;
   color: #FFFFFF;
 }
 
 @media screen and (min-width: 460px) {
-  .footer h4,
-  .footer p {
+  .footer .heading-4,
+  .footer .paragraph {
     font-size: 1.1rem;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .footer h4,
-  .footer p {
+  .footer .heading-4,
+  .footer .paragraph {
     font-size: 15px;
   }
 }
 
-.footer .margin-bottom {
-  margin-bottom: 4vh;
+.footer .footer__margin-bottom {
+  margin-bottom: 3vh;
 }
 /*# sourceMappingURL=main.css.map */
