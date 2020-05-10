@@ -9,8 +9,13 @@
     margin-top: 32px;
     margin-bottom: 40px;
 
+    @include mobile-medium {
+        text-align: center;
+    }
+
     @include tablet {
         width: 100%;
+        text-align: start;
         padding-left: 24px;
     }
 
@@ -23,12 +28,7 @@
     &__table {
         margin-top: 30px;
 
-        @include mobile-medium {
-            text-align: center;
-        }
-
         @include tablet {
-            text-align: start;
             margin-right: 24px;
         }
 
@@ -53,6 +53,7 @@
             @include tablet {
                 width: 25%;
                 font-size: 1.2rem;
+                margin-right: 10px;
             }
 
             @include desktop {
@@ -64,15 +65,13 @@
             font-size: 1rem;
             
             @include tablet {
-                width: 35%;
+                width: 25%;
                 font-size: 1.2rem;
-                margin-right: 30px;
+                margin-right: 10px;
             }
 
             @include desktop {
-                width: 40%;
                 font-size: 1rem;
-                margin-right: 30px;
             }
         }
     }
@@ -135,9 +134,9 @@
             width: 25%;
         }
     }
-}
 
-.tablet__head {
-    color: $silver;
-    font-family: "Avenir Demi Bold";
+    &--text {
+        color: $silver;
+        font-family: "Avenir Demi Bold";
+    }
 }

@@ -500,9 +500,16 @@ body {
   margin-bottom: 40px;
 }
 
+@media screen and (min-width: 460px) {
+  .shows {
+    text-align: center;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .shows {
     width: 100%;
+    text-align: start;
     padding-left: 24px;
   }
 }
@@ -521,15 +528,8 @@ body {
   margin-top: 30px;
 }
 
-@media screen and (min-width: 460px) {
-  .shows__table {
-    text-align: center;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .shows__table {
-    text-align: start;
     margin-right: 24px;
   }
 }
@@ -565,6 +565,7 @@ body {
   .shows__card .heading-3 {
     width: 25%;
     font-size: 1.2rem;
+    margin-right: 10px;
   }
 }
 
@@ -580,17 +581,15 @@ body {
 
 @media screen and (min-width: 768px) {
   .shows__card .paragraph {
-    width: 35%;
+    width: 25%;
     font-size: 1.2rem;
-    margin-right: 30px;
+    margin-right: 10px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .shows__card .paragraph {
-    width: 40%;
     font-size: 1rem;
-    margin-right: 30px;
   }
 }
 
@@ -667,7 +666,7 @@ body {
   }
 }
 
-.tablet__head {
+.tablet__header--text {
   color: #AFAFAF;
   font-family: "Avenir Demi Bold";
 }

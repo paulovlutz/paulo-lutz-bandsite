@@ -2,7 +2,7 @@ let api_key = "53dec659-95be-4408-a184-a3c3050da62f";
 
 let commentsDiv = document.querySelector(".conversation__comments");
 
-function timeStamp(time) {
+function buildTimeDescription(time) {
     let currentDate = new Date();
 
     let msMinute = 60 * 1000;
@@ -89,7 +89,7 @@ function displayComment(commentObj) {
     let comment__date = document.createElement("p");
     comment__date.className = "conversation__nameAndDate-date";
     let time = commentObj.timestamp;
-    comment__date.innerText = timeStamp(time);
+    comment__date.innerText = buildTimeDescription(time);
     column__namedate.appendChild(comment__date);
 
     column__details.append(column__namedate);
@@ -105,14 +105,14 @@ function displayComment(commentObj) {
     conversation__inputHidden.setAttribute("name", "hiddenID");
     conversation__inputHidden.setAttribute("value", commentObj.id);
 
-    addListenerToDeleteForm(deleteForm);
-
     deleteForm.appendChild(conversation__inputHidden);
 
     let comment__delete = document.createElement("button");
     comment__delete.innerText = "Delete";
     comment__delete.className = "conversation__delete-button";
     deleteForm.appendChild(comment__delete);
+
+    addListenerToDeleteForm(deleteForm);
 
     column__details.appendChild(deleteForm);
 
@@ -121,7 +121,7 @@ function displayComment(commentObj) {
 }
 
 function getCommentsData() {
-    displayComment.innerText = "";
+    commentsDiv.innerText = "";
     axios
         .get(`https://project-1-api.herokuapp.com/comments?api_key=${api_key}`)
         .then(result => {
